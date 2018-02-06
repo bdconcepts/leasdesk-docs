@@ -1,10 +1,11 @@
 # Authentication
 
-> To authorize, use this code:
+> To authenticate, use this code:
 
 ```shell
 curl "https://ptchr-bdlease-hexon.dev/oauth/token"
   -X POST
+  -H "Accept: application/json" 
   -d "grant_type=client_credentials&client_id=<your_client_id>&client_secret=<your_client_secret>"
 ```
 
@@ -39,3 +40,16 @@ In response to this call you'll receive an long lived access_token which can be 
 <aside class="notice">
 Make sure to replace with your client ID and secret
 </aside>
+
+# Authorization
+
+> Add these headers to each request:
+
+```shell
+curl "<api_endpoint_url>"
+  -X METHOD
+  -H "Accept: application/json" 
+  -H "Authorization: Bearer <token>" 
+```
+
+To authorize, you have to send the token as a header in all requests. Also make sure you send the "Accept: application/json" header, this header is used to render errors within the system in json instead of serving HTTP responses containing HTML.
