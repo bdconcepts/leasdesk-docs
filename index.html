@@ -239,6 +239,9 @@
               </ul>
           </li>
           <li>
+            <a href="#authorization" class="toc-h1 toc-link" data-title="authorization">Authorization</a>
+          </li>
+          <li>
             <a href="#advertisers" class="toc-h1 toc-link" data-title="advertisers">Advertisers</a>
               <ul class="toc-list-h2">
                   <li>
@@ -278,10 +281,11 @@
 <p>The current version of our API is version 1.0, please prefix all routes using <code>api/v1/</code>, for example <code>https://bdlease.dev/api/v1/user</code>.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>To authenticate, use this code:</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://ptchr-bdlease-hexon.dev/oauth/token"</span>
   -X POST
+  -H <span class="s2">"Accept: application/json"</span> 
   -d <span class="s2">"grant_type=client_credentials&amp;client_id=&lt;your_client_id&gt;&amp;client_secret=&lt;your_client_secret&gt;"</span>
 </code></pre>
 <blockquote>
@@ -326,6 +330,16 @@
 <aside class="notice">
 Make sure to replace with your client ID and secret
 </aside>
+<h1 id='authorization'>Authorization</h1>
+<blockquote>
+<p>Add these headers to each request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"&lt;api_endpoint_url&gt;"</span>
+  -X METHOD
+  -H <span class="s2">"Accept: application/json"</span> 
+  -H <span class="s2">"Authorization: Bearer &lt;token&gt;"</span> 
+</code></pre>
+<p>To authorize, you have to send the token as a header in all requests. Also make sure you send the &quot;Accept: application/json&quot; header, this header is used to render errors within the system in json instead of serving HTTP responses containing HTML.</p>
 <h1 id='advertisers'>Advertisers</h1><h2 id='get-all-advertisers'>Get All Advertisers</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
   -H <span class="s2">"Authorization: meowmeowmeow"</span>
 </code></pre>
