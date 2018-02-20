@@ -11,6 +11,7 @@ includes:
   - intro
   - authentication
   - advertiser
+  - cars
   - errors
 
 search: true
