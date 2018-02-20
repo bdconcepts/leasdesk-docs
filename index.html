@@ -223,6 +223,14 @@
           </li>
           <li>
             <a href="#api-version" class="toc-h1 toc-link" data-title="api-version">API Version</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#environment-base-urls" class="toc-h2 toc-link" data-title="environment-base-urls">Environment base URLs</a>
+                  </li>
+                  <li>
+                    <a href="#current-version" class="toc-h2 toc-link" data-title="current-version">Current version</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
@@ -304,18 +312,16 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the BD Lease API! You can use our API to publish, manage and remove resources to our database of cars and advertisers.</p>
-
-<p>Before you can start using our API, please request a <code>Client ID</code> and <code>Client Secret</code> for your application.</p>
+<p>Welcome to the BD Lease API! You can use our API to publish, update and remove resources to our database of cars and advertisers. Before you can start using our API, please request a <code>Client ID</code> and <code>Client Secret</code> for your application.</p>
 <h1 id='api-version'>API Version</h1>
-<p>Our API consists of a staging environment to test your integration with our API and a production environment for exchanging live data. Both environments come with their own authentication tokens.</p>
-
+<p>The API has a staging environment to test your integration and a production environment for exchanging live data. Both environments come with their own authentication tokens, so please make sure you&#39;ve received or requested access to the environment you want to use.</p>
+<h3 id='environment-base-urls'>Environment base URLs</h3>
 <ul>
-<li><strong>Production</strong> - unknown</li>
-<li><strong>Staging environment</strong> - https://leasedesk.ptchr-dev.nl</li>
+<li><strong>Production</strong> - <code>unknown</code></li>
+<li><strong>Staging environment</strong> - <code>https://leasedesk.ptchr-dev.nl/</code></li>
 </ul>
-
-<p>The current version of our API is version 1.0, please prefix all routes using <code>api/v1/</code>, for example <code>https://leasedesk.ptchr-dev.nl/api/v1/user</code>.</p>
+<h3 id='current-version'>Current version</h3>
+<p>The current version of our API is v1, please prefix all routes using <code>api/v1/</code>, for example <code>https://leasedesk.ptchr-dev.nl/api/v1/user</code>.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authenticate, use this code:</p>
@@ -365,7 +371,7 @@
 <p>In response to this call you&#39;ll receive an long lived access_token which can be used to access the resourced mentioned below.</p>
 
 <aside class="notice">
-Make sure to replace with your client ID and secret
+Make sure to replace with your client ID and Client Secret with the ones for the correct environment.
 </aside>
 <h1 id='authorization'>Authorization</h1>
 <blockquote>
@@ -376,7 +382,7 @@ Make sure to replace with your client ID and secret
   -H <span class="s2">"Accept: application/json"</span> 
   -H <span class="s2">"Authorization: Bearer &lt;token&gt;"</span> 
 </code></pre>
-<p>To authorize, you have to send the token as a header in all requests. Also make sure you send the &quot;Accept: application/json&quot; header, this header is used to render errors within the system in json instead of serving HTTP responses containing HTML.</p>
+<p>To authorize each next request when using the API you have to add the access_token to the header of your request. Also make sure you send the &quot;Accept: application/json&quot; header, this header is used by our system to render errors within the system in json instead of serving HTTP responses containing HTML.</p>
 <h1 id='advertisers'>Advertisers</h1><h2 id='create-an-advertiser'>Create an Advertiser</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/advertiser
     -X POST
     -H "</span>Authorization: &lt;your_access_token&gt;<span class="s2">"
