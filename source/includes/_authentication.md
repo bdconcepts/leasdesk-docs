@@ -38,7 +38,7 @@ client_secret | none | Use the Client Secret you received
 In response to this call you'll receive an long lived access_token which can be used to access the resourced mentioned below.
 
 <aside class="notice">
-Make sure to replace with your client ID and secret
+Make sure to replace with your client ID and Client Secret with the ones for the correct environment.
 </aside>
 
 # Authorization
@@ -52,4 +52,4 @@ curl "<api_endpoint_url>"
   -H "Authorization: Bearer <token>" 
 ```
 
-To authorize, you have to send the token as a header in all requests. Also make sure you send the "Accept: application/json" header, this header is used to render errors within the system in json instead of serving HTTP responses containing HTML.
+To authorize each next request when using the API you have to add the access_token to the header of your request. Also make sure you send the "Accept: application/json" header, this header is used by our system to render errors within the system in json instead of serving HTTP responses containing HTML.
