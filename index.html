@@ -262,6 +262,29 @@
               </ul>
           </li>
           <li>
+            <a href="#cars" class="toc-h1 toc-link" data-title="cars">Cars</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-a-car" class="toc-h2 toc-link" data-title="create-a-car">Create a Car</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-car" class="toc-h2 toc-link" data-title="update-a-car">Update a Car</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-cars" class="toc-h2 toc-link" data-title="get-all-cars">Get All Cars</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-car" class="toc-h2 toc-link" data-title="get-a-specific-car">Get a Specific Car</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-car" class="toc-h2 toc-link" data-title="delete-a-specific-car">Delete a Specific Car</a>
+                  </li>
+                  <li>
+                    <a href="#field-type-description" class="toc-h2 toc-link" data-title="field-type-description">Field type description</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
       </div>
@@ -710,7 +733,1328 @@ Remember — don't forget to authenticate!
 <td>The ID of the Advertiser to delete</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
+<h1 id='cars'>Cars</h1><h2 id='create-a-car'>Create a Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/car
+    -X POST
+    -H "</span>Authorization: &lt;your_access_token&gt;<span class="s2">"
+    -H "</span>Content-Type: application/json<span class="s2">"
+    -H "</span>Accept: application/json<span class="s2">"
+    --data {
+       "</span>car_id<span class="s2">": "</span>321413954<span class="s2">",
+       "</span>advertiser<span class="s2">": 1,
+       "</span>license_plate_number<span class="s2">": "</span>PD839Z<span class="s2">",
+       "</span>chassis_number<span class="s2">": null,
+       "</span>brand<span class="s2">": "</span>Opel<span class="s2">",
+       "</span><span class="nb">type</span><span class="s2">": "</span>Corsa<span class="s2">",
+       "</span>serie<span class="s2">": "</span>1.4-16V DESIGN EDITION 5-Drs Airco LM16<span class="s1">'",
+       "description": "Modelreeks: &amp;lt;b&amp;gt;jan 2013 - jan 2015&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Modelcode: &amp;lt;b&amp;gt;D&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Motorinhoud: &amp;lt;b&amp;gt;1.364 cc&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, GVW: &amp;lt;b&amp;gt;1.640 kg&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Max. trekgewicht: &amp;lt;b&amp;gt;1.000 kg&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Afmetingen (LxBxH): &amp;lt;b&amp;gt;404 x 174 x 149 cm&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Wielbasis: &amp;lt;b&amp;gt;251 cm&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Acceleratie (0-100): &amp;lt;b&amp;gt;12,0 s&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Bekleding: &amp;lt;b&amp;gt;Stof&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Energielabel: &amp;lt;b&amp;gt;B&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Emissieklasse: &amp;lt;b&amp;gt;Euro5&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Onderhoudsboekjes: &amp;lt;b&amp;gt;Aanwezig&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Neem voor meer informatie contact op met Robert Baksteen&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;De door ons genoemde communicatieadviesprijzen zijn inclusief onvermijdbare kosten nodig voor levering van de auto. Optionele pakketten of uitrusting zijn altijd de keuze van de consument en kunnen desgewenst tegen meerprijs geleverd worden.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;Bij Autobedrijf Boks heeft u keuze uit meer dan 250 occasions. Heeft u een auto in te ruilen? Ga dan naar onze website: http://www.autobedrijfboks/occasions en vindt uw nieuwe auto. Binnen 1 werkdag krijgt u een offerte op maat.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;Heeft u een eigen bedrijf? Weleens over financial lease nagedacht? Voor meer informatie hierover ga naar http://www.financialleaseapeldoorn.nl Ook voor ZZP zeer aantrekkelijke tarieven en acceptatie voorwaarden.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;",
+       "body_type": null,
+       "fuel_type": null,
+       "fuel_consumption_city": "16",
+       "fuel_consumption_highway": "23",
+       "fuel_consumption_combined": "20",
+       "transmission_type": null,
+       "transmission_amount": 5,
+       "color": "geel",
+       "color_brand": null,
+       "mileage": 59638,
+       "mileage_type": "KM",
+       "nap_valid": false,
+       "engine_cylinders": null,
+       "engine_power": 74,
+       "engine_power_type": "KW",
+       "engine_top_speed": 180,
+       "engine_top_speed_type": "KM",
+       "emission_co2": 120,
+       "load_capacity": 577,
+       "doors": 5,
+       "seats": 5,
+       "keys_amount": 2,
+       "weight": 1063,
+       "construction_date": "2014-01-01",
+       "apk_due_date": "2018-11-26",
+       "price_excl_vat": 10450,
+       "price_incl_vat": 10450,
+       "price_delivery": 0,
+       "price_bpm": 1051,
+       "tax_benefit": 25,
+       "tax_road_min": "117.00",
+       "tax_road_max": "130.00",
+       "accessories": [
+           "3e remlicht",
+           "Airbag(s) hoofd en side",
+           "Airbag bestuurder en passagier",
+           "Airco",
+           "Alarm klasse 1(startblokkering)",
+           "Anti blokkeer systeem",
+           "AUX-ingang",
+           "Bestuurdersstoel in hoogte verstelbaar",
+           "Boordcomputer",
+           "Buitenspiegels elektrisch verstelbaar",
+           "Centrale deurvergrendeling met afstandsbediening",
+           "Cruise control",
+           "Electronic stability program",
+           "Elektrische ramen voor",
+           "Extra getint glas",
+           "Hoofdsteunen achter",
+           "Isofix",
+           "Lederen stuurwiel",
+           "Lichtmetalen velgen 16\"",
+           "Mistlampen voor",
+           "Multimedia-voorbereiding",
+           "Navigatie systeem af fabriek",
+           "Radio-cd/mp3 speler",
+           "Ruitenwisser achter",
+           "Stuur verstelbaar",
+           "USB-poort"
+       ],
+       "videos": [
+           {
+               "type": "YT",
+               "url": "https://www.youtube.com/v/4160NvEhThA"
+           }
+       ],
+       "images": [
+        { "url" : "http://google.com/image.jpg" },
+        { "url" : "http://google.com/image2.jpg" },
+        { "url" : "http://google.com/image3.jpg" }
+       ],
+   }
+</span></code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"car_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"321413954"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"advertiser"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"advertiser_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_124"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Autobedrijf Janssen"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stationstraat"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"number_extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zipcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234AB"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Maastricht"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nederland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+31 40 123 45 67"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info@autobedrijfjassen.nl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"web"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://autobedrijfjanssen.nl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"license_plate_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PD839Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"chassis_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Opel"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Corsa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"serie"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.4-16V DESIGN EDITION 5-Drs Airco LM16 KEIGAAF"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Modelreeks: &amp;lt;b&amp;gt;jan 2013 - jan 2015&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Modelcode: &amp;lt;b&amp;gt;D&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Motorinhoud: &amp;lt;b&amp;gt;1.364 cc&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, GVW: &amp;lt;b&amp;gt;1.640 kg&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Max. trekgewicht: &amp;lt;b&amp;gt;1.000 kg&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Afmetingen (LxBxH): &amp;lt;b&amp;gt;404 x 174 x 149 cm&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Wielbasis: &amp;lt;b&amp;gt;251 cm&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Acceleratie (0-100): &amp;lt;b&amp;gt;12,0 s&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Bekleding: &amp;lt;b&amp;gt;Stof&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Energielabel: &amp;lt;b&amp;gt;B&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Emissieklasse: &amp;lt;b&amp;gt;Euro5&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Onderhoudsboekjes: &amp;lt;b&amp;gt;Aanwezig&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Neem voor meer informatie contact op met Jan Janssen&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;De door ons genoemde communicatieadviesprijzen zijn inclusief onvermijdbare kosten nodig voor levering van de auto. Optionele pakketten of uitrusting zijn altijd de keuze van de consument en kunnen desgewenst tegen meerprijs geleverd worden.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;Bij Autobedrijf Janssen heeft u keuze uit meer dan 250 occasions. Heeft u een auto in te ruilen? Ga dan naar onze website en vindt uw nieuwe auto. Binnen 1 werkdag krijgt u een offerte op maat.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;Heeft u een eigen bedrijf? Weleens over financial lease nagedacht? Voor meer informatie hierover ga naar http://www.leasenismooi.nl Ook voor ZZP zeer aantrekkelijke tarieven en acceptatie voorwaarden.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"body_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fuel_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fuel_consumption_city"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fuel_consumption_highway"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fuel_consumption_combined"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"transmission_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"transmission_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geel"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"color_brand"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"mileage"</span><span class="p">:</span><span class="w"> </span><span class="mi">59638</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"mileage_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KM"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nap_valid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_cylinders"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_power"</span><span class="p">:</span><span class="w"> </span><span class="mi">74</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_power_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KW"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_top_speed"</span><span class="p">:</span><span class="w"> </span><span class="mi">180</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_top_speed_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KM"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"emission_co2"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"load_capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">577</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"doors"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"seats"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"keys_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">1063</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"construction_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-01-01 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"apk_due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-26 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_excl_vat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10450.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_incl_vat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10450.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_delivery"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_bpm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1051.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tax_benefit"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tax_road_min"</span><span class="p">:</span><span class="w"> </span><span class="s2">"117.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tax_road_max"</span><span class="p">:</span><span class="w"> </span><span class="s2">"130.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"accessories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"3e remlicht"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Airbag(s) hoofd en side"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Airbag bestuurder en passagier"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Airco"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Alarm klasse 1(startblokkering)"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Anti blokkeer systeem"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"AUX-ingang"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Bestuurdersstoel in hoogte verstelbaar"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Boordcomputer"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Buitenspiegels elektrisch verstelbaar"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Centrale deurvergrendeling met afstandsbediening"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Cruise control"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Electronic stability program"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Elektrische ramen voor"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Extra getint glas"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Hoofdsteunen achter"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Isofix"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Lederen stuurwiel"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Lichtmetalen velgen 16</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Mistlampen voor"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Multimedia-voorbereiding"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Navigatie systeem af fabriek"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Radio-cd/mp3 speler"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Ruitenwisser achter"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Stuur verstelbaar"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"USB-poort"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YT"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.youtube.com/v/RICBjWLwupw"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"http://google.com/image.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"http://google.com/image2.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"http://google.com/image3.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:39"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:50:27"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://leasedesk.ptchr-dev.nl/aanbod/1"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates a new Car.</p>
+
+<aside class="warning">Make sure you send the json payload as raw body data to the endpoint. Also remember that the advertiser ID should be equal to the ID returned by your call when creating an Advertiser!</aside>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://leasedesk.ptchr-dev.nl/api/v1/car/</code></p>
+<h3 id='raw-body-parameters-json'>Raw Body Parameters (JSON)</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required</th>
+<th>Validation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>advertiser_id</td>
+<td>The ID a given by the Advertiser endpoint</td>
+<td>Yes</td>
+<td><em>existing ID as returned by Advertiser endpoint</em></td>
+</tr>
+<tr>
+<td>car_id</td>
+<td>The car ID from your own database</td>
+<td>Yes</td>
+<td><em>Must be unique (not previously added)</em></td>
+</tr>
+<tr>
+<td>license_plate_number</td>
+<td>The license plate number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>brand</td>
+<td>The brand name</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>The type name</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>serie</td>
+<td>The series description</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>description</td>
+<td>Full car description</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>color</td>
+<td>The color of the car</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>color_brand</td>
+<td>The factory name of the color</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>fuel_type</td>
+<td>The fuel type (see below)</td>
+<td>Yes</td>
+<td><em>in: B,D,E,EB,ED,LPG,O</em></td>
+</tr>
+<tr>
+<td>fuel_consumption_city</td>
+<td>Fuel consumption in the city in KM per Liter</td>
+<td>No</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>fuel_consumption_highway</td>
+<td>Fuel consumption on the highway in KM per Liter</td>
+<td>No</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>fuel_consumption_combined</td>
+<td>Fuel consumption average in KM per Liter</td>
+<td>No</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>transmission_type</td>
+<td>Transmission type (see below)</td>
+<td>Yes</td>
+<td><em>in: H,A,O</em></td>
+</tr>
+<tr>
+<td>transmission_amount</td>
+<td>The amount of gears</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>body_type</td>
+<td>The body type (see below)</td>
+<td>Yes</td>
+<td><em>in: HB,CB,CP,SUV,SD,SW,MPV,CC,O</em></td>
+</tr>
+<tr>
+<td>construction_date</td>
+<td>The construction date</td>
+<td>Yes</td>
+<td><em>date:Y-m-d</em></td>
+</tr>
+<tr>
+<td>mileage</td>
+<td>The mileage amount</td>
+<td>Yes</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>mileage_type</td>
+<td>The mileage type (see below)</td>
+<td>Yes</td>
+<td><em>in: KM,M</em></td>
+</tr>
+<tr>
+<td>doors</td>
+<td>The number of doors</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>engine_cylinders</td>
+<td>The number of cylinders</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>engine_power</td>
+<td>The power of the engine</td>
+<td>Yes</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>engine_power_type</td>
+<td>The power type (see below)</td>
+<td>Yes</td>
+<td><em>in: PK,KW</em></td>
+</tr>
+<tr>
+<td>engine_top_speed</td>
+<td>The top speed of the vehicle</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>engine_top_speed_type</td>
+<td>The speed type (see below)</td>
+<td>No</td>
+<td><em>in: KM,M</em></td>
+</tr>
+<tr>
+<td>apk_due_date</td>
+<td>Due date for the yearly check-up</td>
+<td>No</td>
+<td><em>date:Y-m-d</em></td>
+</tr>
+<tr>
+<td>nap_valid</td>
+<td>Does the car have a valid NAP?</td>
+<td>No</td>
+<td><em>boolean</em></td>
+</tr>
+<tr>
+<td>price_excl_vat</td>
+<td>Pricing excl VAT</td>
+<td>Yes</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>price_incl_vat</td>
+<td>Pricing incl VAT</td>
+<td>Yes</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>price_delivery</td>
+<td>Delivery costs</td>
+<td>Yes</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>price_bpm</td>
+<td>The BPM amount</td>
+<td>No</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>chassis_number</td>
+<td>The chassisnumber</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>keys_amount</td>
+<td>Amount of available keys</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>emission_co2</td>
+<td>The co2 emission in g/km</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>seats</td>
+<td>The amount of seats</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>load_capacity</td>
+<td>The load capacity in Liter</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>weight</td>
+<td>The weight in kilogram</td>
+<td>Yes</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>tax_benefit</td>
+<td>Tax benefit class in percent</td>
+<td>Yes</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>road_tax_min</td>
+<td>Minimum amount of road tax</td>
+<td>Yes</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>road_tax_max</td>
+<td>Maximum amount of road tax</td>
+<td>Yes</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>images</td>
+<td>Array of images (see below)</td>
+<td>Yes</td>
+<td><em>array</em></td>
+</tr>
+<tr>
+<td>videos</td>
+<td>Array of videos (see below)</td>
+<td>No</td>
+<td><em>array</em></td>
+</tr>
+<tr>
+<td>accessories</td>
+<td>Array of accessores (see below)</td>
+<td>No</td>
+<td><em>array</em></td>
+</tr>
+</tbody></table>
+<h2 id='update-a-car'>Update a Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/car/&lt;ID&gt;
+    -X PUT
+    -H "</span>Authorization: &lt;your_access_token&gt;<span class="s2">"
+    -H "</span>Content-Type: application/json<span class="s2">"
+    -H "</span>Accept: application/json<span class="s2">"
+    --data {
+       "</span>advertiser<span class="s2">": 1,
+       "</span>license_plate_number<span class="s2">": "</span>AABB11<span class="s2">",
+       "</span>chassis_number<span class="s2">": null,
+       "</span>brand<span class="s2">": "</span>Opel<span class="s2">",
+       "</span><span class="nb">type</span><span class="s2">": "</span>Corsa<span class="s2">",
+       "</span>serie<span class="s2">": "</span>1.4-16V DESIGN EDITION 5-Drs Airco LM16<span class="s1">'",
+       "description": "Modelreeks: &amp;lt;b&amp;gt;jan 2013 - jan 2015&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Modelcode: &amp;lt;b&amp;gt;D&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Motorinhoud: &amp;lt;b&amp;gt;1.364 cc&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, GVW: &amp;lt;b&amp;gt;1.640 kg&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Max. trekgewicht: &amp;lt;b&amp;gt;1.000 kg&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Afmetingen (LxBxH): &amp;lt;b&amp;gt;404 x 174 x 149 cm&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Wielbasis: &amp;lt;b&amp;gt;251 cm&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Acceleratie (0-100): &amp;lt;b&amp;gt;12,0 s&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Bekleding: &amp;lt;b&amp;gt;Stof&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Energielabel: &amp;lt;b&amp;gt;B&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Emissieklasse: &amp;lt;b&amp;gt;Euro5&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Onderhoudsboekjes: &amp;lt;b&amp;gt;Aanwezig&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Neem voor meer informatie contact op met Robert Baksteen&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;De door ons genoemde communicatieadviesprijzen zijn inclusief onvermijdbare kosten nodig voor levering van de auto. Optionele pakketten of uitrusting zijn altijd de keuze van de consument en kunnen desgewenst tegen meerprijs geleverd worden.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;Bij Autobedrijf Boks heeft u keuze uit meer dan 250 occasions. Heeft u een auto in te ruilen? Ga dan naar onze website: http://www.autobedrijfboks/occasions en vindt uw nieuwe auto. Binnen 1 werkdag krijgt u een offerte op maat.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;Heeft u een eigen bedrijf? Weleens over financial lease nagedacht? Voor meer informatie hierover ga naar http://www.financialleaseapeldoorn.nl Ook voor ZZP zeer aantrekkelijke tarieven en acceptatie voorwaarden.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;",
+       "body_type": null,
+       "fuel_type": null,
+       "fuel_consumption_city": "16",
+       "fuel_consumption_highway": "23",
+       "fuel_consumption_combined": "20",
+       "transmission_type": null,
+       "transmission_amount": 5,
+       "color": "geel",
+       "color_brand": null,
+       "mileage": 59638,
+       "mileage_type": "KM",
+       "nap_valid": false,
+       "engine_cylinders": null,
+       "engine_power": 74,
+       "engine_power_type": "KW",
+       "engine_top_speed": 180,
+       "engine_top_speed_type": "KM",
+       "emission_co2": 120,
+       "load_capacity": 577,
+       "doors": 5,
+       "seats": 5,
+       "keys_amount": 2,
+       "weight": 1063,
+       "construction_date": "2014-01-01",
+       "apk_due_date": "2018-11-26",
+       "price_excl_vat": 10450,
+       "price_incl_vat": 10450,
+       "price_delivery": 0,
+       "price_bpm": 1051,
+       "tax_benefit": 25,
+       "tax_road_min": "117.00",
+       "tax_road_max": "130.00",
+       "accessories": [
+           "3e remlicht",
+           "Airbag(s) hoofd en side",
+           "Airbag bestuurder en passagier",
+           "Airco",
+           "Alarm klasse 1(startblokkering)",
+           "Anti blokkeer systeem",
+           "AUX-ingang",
+           "Bestuurdersstoel in hoogte verstelbaar",
+           "Boordcomputer",
+           "Buitenspiegels elektrisch verstelbaar",
+           "Centrale deurvergrendeling met afstandsbediening",
+           "Cruise control",
+           "Electronic stability program",
+           "Elektrische ramen voor",
+           "Extra getint glas",
+           "Hoofdsteunen achter",
+           "Isofix",
+           "Lederen stuurwiel",
+           "Lichtmetalen velgen 16\"",
+           "Mistlampen voor",
+           "Multimedia-voorbereiding",
+           "Navigatie systeem af fabriek",
+           "Radio-cd/mp3 speler",
+           "Ruitenwisser achter",
+           "Stuur verstelbaar",
+           "USB-poort"
+       ],
+       "videos": [
+           {
+               "type": "YT",
+               "url": "https://www.youtube.com/v/4160NvEhThA"
+           }
+       ],
+       "images": [
+        { "url" : "http://google.com/image.jpg" },
+        { "url" : "http://google.com/image2.jpg" },
+        { "url" : "http://google.com/image3.jpg" }
+       ],
+   }
+</span></code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"car_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"321413954"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"advertiser"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"advertiser_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_124"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Autobedrijf Janssen"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stationstraat"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"number_extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zipcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234AB"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Maastricht"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nederland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+31 40 123 45 67"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info@autobedrijfjassen.nl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"web"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://autobedrijfjanssen.nl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"license_plate_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AABB11"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"chassis_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Opel"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Corsa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"serie"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.4-16V DESIGN EDITION 5-Drs Airco LM16 KEIGAAF"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Modelreeks: &amp;lt;b&amp;gt;jan 2013 - jan 2015&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Modelcode: &amp;lt;b&amp;gt;D&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Motorinhoud: &amp;lt;b&amp;gt;1.364 cc&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, GVW: &amp;lt;b&amp;gt;1.640 kg&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Max. trekgewicht: &amp;lt;b&amp;gt;1.000 kg&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Afmetingen (LxBxH): &amp;lt;b&amp;gt;404 x 174 x 149 cm&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Wielbasis: &amp;lt;b&amp;gt;251 cm&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Acceleratie (0-100): &amp;lt;b&amp;gt;12,0 s&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Bekleding: &amp;lt;b&amp;gt;Stof&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Energielabel: &amp;lt;b&amp;gt;B&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Emissieklasse: &amp;lt;b&amp;gt;Euro5&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Onderhoudsboekjes: &amp;lt;b&amp;gt;Aanwezig&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Neem voor meer informatie contact op met Jan Janssen&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;De door ons genoemde communicatieadviesprijzen zijn inclusief onvermijdbare kosten nodig voor levering van de auto. Optionele pakketten of uitrusting zijn altijd de keuze van de consument en kunnen desgewenst tegen meerprijs geleverd worden.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;Bij Autobedrijf Janssen heeft u keuze uit meer dan 250 occasions. Heeft u een auto in te ruilen? Ga dan naar onze website en vindt uw nieuwe auto. Binnen 1 werkdag krijgt u een offerte op maat.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;Heeft u een eigen bedrijf? Weleens over financial lease nagedacht? Voor meer informatie hierover ga naar http://www.leasenismooi.nl Ook voor ZZP zeer aantrekkelijke tarieven en acceptatie voorwaarden.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"body_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fuel_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fuel_consumption_city"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fuel_consumption_highway"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fuel_consumption_combined"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"transmission_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"transmission_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geel"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"color_brand"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"mileage"</span><span class="p">:</span><span class="w"> </span><span class="mi">59638</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"mileage_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KM"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nap_valid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_cylinders"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_power"</span><span class="p">:</span><span class="w"> </span><span class="mi">74</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_power_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KW"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_top_speed"</span><span class="p">:</span><span class="w"> </span><span class="mi">180</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_top_speed_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KM"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"emission_co2"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"load_capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">577</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"doors"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"seats"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"keys_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">1063</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"construction_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-01-01 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"apk_due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-26 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_excl_vat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10450.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_incl_vat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10450.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_delivery"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_bpm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1051.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tax_benefit"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tax_road_min"</span><span class="p">:</span><span class="w"> </span><span class="s2">"117.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tax_road_max"</span><span class="p">:</span><span class="w"> </span><span class="s2">"130.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"accessories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"3e remlicht"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Airbag(s) hoofd en side"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Airbag bestuurder en passagier"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Airco"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Alarm klasse 1(startblokkering)"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Anti blokkeer systeem"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"AUX-ingang"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Bestuurdersstoel in hoogte verstelbaar"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Boordcomputer"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Buitenspiegels elektrisch verstelbaar"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Centrale deurvergrendeling met afstandsbediening"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Cruise control"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Electronic stability program"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Elektrische ramen voor"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Extra getint glas"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Hoofdsteunen achter"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Isofix"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Lederen stuurwiel"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Lichtmetalen velgen 16</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Mistlampen voor"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Multimedia-voorbereiding"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Navigatie systeem af fabriek"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Radio-cd/mp3 speler"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Ruitenwisser achter"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Stuur verstelbaar"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"USB-poort"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YT"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.youtube.com/v/RICBjWLwupw"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"http://google.com/image.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"http://google.com/image2.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"http://google.com/image3.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:39"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:50:27"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://leasedesk.ptchr-dev.nl/aanbod/1"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint updates an existing Car.</p>
+
+<aside class="warning">Make sure you send the json payload as raw body data to the endpoint.</aside>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>PUT https://leasedesk.ptchr-dev.nl/api/v1/car/&lt;ID&gt;</code></p>
+<h3 id='raw-body-parameters-json-2'>Raw Body Parameters (JSON)</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required</th>
+<th>Validation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>advertiser_id</td>
+<td>The ID a given by the Advertiser endpoint</td>
+<td>Yes</td>
+<td><em>existing ID as returned by Advertiser endpoint</em></td>
+</tr>
+<tr>
+<td>license_plate_number</td>
+<td>The license plate number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>brand</td>
+<td>The brand name</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>The type name</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>serie</td>
+<td>The series description</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>description</td>
+<td>Full car description</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>color</td>
+<td>The color of the car</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>color_brand</td>
+<td>The factory name of the color</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>fuel_type</td>
+<td>The fuel type (see below)</td>
+<td>Yes</td>
+<td><em>in: B,D,E,EB,ED,LPG,O</em></td>
+</tr>
+<tr>
+<td>fuel_consumption_city</td>
+<td>Fuel consumption in the city in KM per Liter</td>
+<td>No</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>fuel_consumption_highway</td>
+<td>Fuel consumption on the highway in KM per Liter</td>
+<td>No</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>fuel_consumption_combined</td>
+<td>Fuel consumption average in KM per Liter</td>
+<td>No</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>transmission_type</td>
+<td>Transmission type (see below)</td>
+<td>Yes</td>
+<td><em>in: H,A,O</em></td>
+</tr>
+<tr>
+<td>transmission_amount</td>
+<td>The amount of gears</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>body_type</td>
+<td>The body type (see below)</td>
+<td>Yes</td>
+<td><em>in: HB,CB,CP,SUV,SD,SW,MPV,CC,O</em></td>
+</tr>
+<tr>
+<td>construction_date</td>
+<td>The construction date</td>
+<td>Yes</td>
+<td><em>date:Y-m-d</em></td>
+</tr>
+<tr>
+<td>mileage</td>
+<td>The mileage amount</td>
+<td>Yes</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>mileage_type</td>
+<td>The mileage type (see below)</td>
+<td>Yes</td>
+<td><em>in: KM,M</em></td>
+</tr>
+<tr>
+<td>doors</td>
+<td>The number of doors</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>engine_cylinders</td>
+<td>The number of cylinders</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>engine_power</td>
+<td>The power of the engine</td>
+<td>Yes</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>engine_power_type</td>
+<td>The power type (see below)</td>
+<td>Yes</td>
+<td><em>in: PK,KW</em></td>
+</tr>
+<tr>
+<td>engine_top_speed</td>
+<td>The top speed of the vehicle</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>engine_top_speed_type</td>
+<td>The speed type (see below)</td>
+<td>No</td>
+<td><em>in: KM,M</em></td>
+</tr>
+<tr>
+<td>apk_due_date</td>
+<td>Due date for the yearly check-up</td>
+<td>No</td>
+<td><em>date:Y-m-d</em></td>
+</tr>
+<tr>
+<td>nap_valid</td>
+<td>Does the car have a valid NAP?</td>
+<td>No</td>
+<td><em>boolean</em></td>
+</tr>
+<tr>
+<td>price_excl_vat</td>
+<td>Pricing excl VAT</td>
+<td>Yes</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>price_incl_vat</td>
+<td>Pricing incl VAT</td>
+<td>Yes</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>price_delivery</td>
+<td>Delivery costs</td>
+<td>Yes</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>price_bpm</td>
+<td>The BPM amount</td>
+<td>No</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>chassis_number</td>
+<td>The chassisnumber</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>keys_amount</td>
+<td>Amount of available keys</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>emission_co2</td>
+<td>The co2 emission in g/km</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>seats</td>
+<td>The amount of seats</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>load_capacity</td>
+<td>The load capacity in Liter</td>
+<td>No</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>weight</td>
+<td>The weight in kilogram</td>
+<td>Yes</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td>tax_benefit</td>
+<td>Tax benefit class in percent</td>
+<td>Yes</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>road_tax_min</td>
+<td>Minimum amount of road tax</td>
+<td>Yes</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>road_tax_max</td>
+<td>Maximum amount of road tax</td>
+<td>Yes</td>
+<td><em>numeric</em></td>
+</tr>
+<tr>
+<td>images</td>
+<td>Array of images (see below)</td>
+<td>Yes</td>
+<td><em>array</em></td>
+</tr>
+<tr>
+<td>videos</td>
+<td>Array of videos (see below)</td>
+<td>No</td>
+<td><em>array</em></td>
+</tr>
+<tr>
+<td>accessories</td>
+<td>Array of accessores (see below)</td>
+<td>No</td>
+<td><em>array</em></td>
+</tr>
+</tbody></table>
+<h2 id='get-all-cars'>Get All Cars</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/car"</span>
+  -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"advertiser_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_124"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Autobedrijf Janssen"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stationstraat"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"number_extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zipcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234AB"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Maastricht"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nederland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+31 40 123 45 67"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info@autobedrijfjassen.nl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"web"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://autobedrijfjanssen.nl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"advertiser_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_123"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Autobedrijf Peters"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Helmweg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"number_extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zipcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9876XZ"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hengelo"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nederland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+31 40 987 65 43"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info@autobedrijfpeters.nl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"web"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://autobedrijfpeters.nl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Cars created by the currently authenticated client.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://leasedesk.ptchr-dev.nl/api/v1/car</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<p>None</p>
+
+<aside class="success">
+Remember — don't forget to authenticate!
+</aside>
+<h2 id='get-a-specific-car'>Get a Specific Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/car/1"</span>
+  -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"car_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"321413954"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"advertiser"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"advertiser_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_124"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Autobedrijf Janssen"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stationstraat"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"number_extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zipcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234AB"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Maastricht"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nederland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+31 40 123 45 67"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info@autobedrijfjassen.nl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"web"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://autobedrijfjanssen.nl"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"license_plate_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PD839Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"chassis_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Opel"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Corsa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"serie"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.4-16V DESIGN EDITION 5-Drs Airco LM16 KEIGAAF"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Modelreeks: &amp;lt;b&amp;gt;jan 2013 - jan 2015&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Modelcode: &amp;lt;b&amp;gt;D&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Motorinhoud: &amp;lt;b&amp;gt;1.364 cc&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, GVW: &amp;lt;b&amp;gt;1.640 kg&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Max. trekgewicht: &amp;lt;b&amp;gt;1.000 kg&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Afmetingen (LxBxH): &amp;lt;b&amp;gt;404 x 174 x 149 cm&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Wielbasis: &amp;lt;b&amp;gt;251 cm&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Acceleratie (0-100): &amp;lt;b&amp;gt;12,0 s&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Bekleding: &amp;lt;b&amp;gt;Stof&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Energielabel: &amp;lt;b&amp;gt;B&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Emissieklasse: &amp;lt;b&amp;gt;Euro5&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Onderhoudsboekjes: &amp;lt;b&amp;gt;Aanwezig&amp;lt;/b&amp;gt;&amp;lt;br /&amp;gt;, Neem voor meer informatie contact op met Jan Janssen&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;De door ons genoemde communicatieadviesprijzen zijn inclusief onvermijdbare kosten nodig voor levering van de auto. Optionele pakketten of uitrusting zijn altijd de keuze van de consument en kunnen desgewenst tegen meerprijs geleverd worden.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;Bij Autobedrijf Janssen heeft u keuze uit meer dan 250 occasions. Heeft u een auto in te ruilen? Ga dan naar onze website en vindt uw nieuwe auto. Binnen 1 werkdag krijgt u een offerte op maat.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;Heeft u een eigen bedrijf? Weleens over financial lease nagedacht? Voor meer informatie hierover ga naar http://www.leasenismooi.nl Ook voor ZZP zeer aantrekkelijke tarieven en acceptatie voorwaarden.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"body_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fuel_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fuel_consumption_city"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fuel_consumption_highway"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fuel_consumption_combined"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"transmission_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"transmission_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geel"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"color_brand"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"mileage"</span><span class="p">:</span><span class="w"> </span><span class="mi">59638</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"mileage_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KM"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nap_valid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_cylinders"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_power"</span><span class="p">:</span><span class="w"> </span><span class="mi">74</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_power_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KW"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_top_speed"</span><span class="p">:</span><span class="w"> </span><span class="mi">180</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"engine_top_speed_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KM"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"emission_co2"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"load_capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">577</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"doors"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"seats"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"keys_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">1063</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"construction_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-01-01 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"apk_due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-26 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_excl_vat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10450.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_incl_vat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10450.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_delivery"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_bpm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1051.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tax_benefit"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tax_road_min"</span><span class="p">:</span><span class="w"> </span><span class="s2">"117.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tax_road_max"</span><span class="p">:</span><span class="w"> </span><span class="s2">"130.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"accessories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"3e remlicht"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Airbag(s) hoofd en side"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Airbag bestuurder en passagier"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Airco"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Alarm klasse 1(startblokkering)"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Anti blokkeer systeem"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"AUX-ingang"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Bestuurdersstoel in hoogte verstelbaar"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Boordcomputer"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Buitenspiegels elektrisch verstelbaar"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Centrale deurvergrendeling met afstandsbediening"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Cruise control"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Electronic stability program"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Elektrische ramen voor"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Extra getint glas"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Hoofdsteunen achter"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Isofix"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Lederen stuurwiel"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Lichtmetalen velgen 16</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Mistlampen voor"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Multimedia-voorbereiding"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Navigatie systeem af fabriek"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Radio-cd/mp3 speler"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Ruitenwisser achter"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Stuur verstelbaar"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"USB-poort"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YT"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.youtube.com/v/RICBjWLwupw"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"http://google.com/image.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"http://google.com/image2.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"http://google.com/image3.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:39"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:50:27"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://leasedesk.ptchr-dev.nl/aanbod/1"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific Car.</p>
+
+<aside class="warning">If you try to get an advertiser that wasn't added by your client a HTTP error will be returned.</aside>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET https://leasedesk.ptchr-dev.nl/api/v1/car/&lt;ID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the Car to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-car'>Delete a Specific Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/car/1"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[]</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific Car.</p>
+
+<aside class="warning">The JSON response will be empty, when the Car is deleted succesfully a HTTP 200 OK response will be returned.</aside>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>DELETE https://leasedesk.ptchr-dev.nl/api/v1/car/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the Car to delete</td>
+</tr>
+</tbody></table>
+<h2 id='field-type-description'>Field type description</h2>
+<p>Some fields have abbreviated values, below you can find what each value means.</p>
+<h3 id='fuel_type'>fuel_type</h3>
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>B</td>
+<td>Benzine</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Diesel</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Elektrisch</td>
+</tr>
+<tr>
+<td>EB</td>
+<td>Elektrisch-Benzine</td>
+</tr>
+<tr>
+<td>ED</td>
+<td>Elektisch-Diesel</td>
+</tr>
+<tr>
+<td>LPG</td>
+<td>LPG/Gas</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Overige</td>
+</tr>
+</tbody></table>
+<h3 id='transmission_type'>transmission_type</h3>
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>H</td>
+<td>Handgeschakeld</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Automaat</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Overige / semi-automaat</td>
+</tr>
+</tbody></table>
+<h3 id='body_type'>body_type</h3>
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HB</td>
+<td>Hatchback</td>
+</tr>
+<tr>
+<td>CB</td>
+<td>Cabrio</td>
+</tr>
+<tr>
+<td>CP</td>
+<td>Coupe</td>
+</tr>
+<tr>
+<td>SUV</td>
+<td>SUV/Terreinwagen/Pick-up</td>
+</tr>
+<tr>
+<td>SD</td>
+<td>Sedan</td>
+</tr>
+<tr>
+<td>SW</td>
+<td>Stationwagon</td>
+</tr>
+<tr>
+<td>MPV</td>
+<td>MPV</td>
+</tr>
+<tr>
+<td>CC</td>
+<td>Bedrijfswagen (company car)</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Overige</td>
+</tr>
+</tbody></table>
+<h3 id='mileage_type'>mileage_type</h3>
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>KM</td>
+<td>Kilometer</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Mijl</td>
+</tr>
+</tbody></table>
+<h3 id='engine_power_type'>engine_power_type</h3>
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PK</td>
+<td>PK/HP</td>
+</tr>
+<tr>
+<td>KW</td>
+<td>KW</td>
+</tr>
+</tbody></table>
+<h3 id='engine_top_speed_type'>engine_top_speed_type</h3>
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>KM</td>
+<td>KM/u</td>
+</tr>
+<tr>
+<td>M</td>
+<td>M/h</td>
+</tr>
+</tbody></table>
+<h3 id='images'>images</h3>
+<p>The images key in the body should contain an array holding all images, a sample payload is:</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">other</span><span class="w"> </span><span class="err">data</span><span class="w">
+    </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.google.com"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.google.com"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.google.com"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">other</span><span class="w"> </span><span class="err">data</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='videos'>videos</h3>
+<p>The videos key in the body should contain an array holding all images, including the video type, a sample payload is:</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">other</span><span class="w"> </span><span class="err">data</span><span class="w">
+    </span><span class="s2">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.youtube.com"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VM"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.vimeo.com"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">other</span><span class="w"> </span><span class="err">data</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Accepted video types currently are <code>YT</code> (YouTube) and <code>VM</code> (Vimeo).</p>
+<h3 id='accessories'>accessories</h3>
+<p>The accessories key should contain an array holding all accessories, a sample payload is:</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">other</span><span class="w"> </span><span class="err">data</span><span class="w">
+    </span><span class="s2">"accessories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"xenon"</span><span class="p">,</span><span class="w"> </span><span class="s2">"sportstoelen"</span><span class="p">,</span><span class="w"> </span><span class="s2">"climate control"</span><span class="p">]</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">other</span><span class="w"> </span><span class="err">data</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside>
