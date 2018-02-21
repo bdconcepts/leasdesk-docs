@@ -204,7 +204,7 @@ This endpoint creates a new Car.
 
 ### HTTP Request
 
-`POST https://leasedesk.ptchr-dev.nl/api/v1/car/`
+`POST https://leasedesk.ptchr-dev.nl/api/v1/car/create`
 
 ### Raw Body Parameters (JSON)
 

@@ -52,7 +52,7 @@ This endpoint creates a new Advertiser.
 
 ### HTTP Request
 
-`POST https://leasedesk.ptchr-dev.nl/api/v1/advertiser/`
+`POST https://leasedesk.ptchr-dev.nl/api/v1/advertiser/create`
 
 ### Raw Body Parameters (JSON)
 
