@@ -122,7 +122,7 @@ This endpoint updates an existing Advertiser.
 
 ### HTTP Request
 
-`PUT https://leasedesk.ptchr-dev.nl/api/v1/advertiser/`
+`PUT https://leasedesk.ptchr-dev.nl/api/v1/advertiser/<ID>`
 
 ### Raw Body Parameters (JSON)
 
