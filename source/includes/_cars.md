@@ -15,7 +15,7 @@ curl "https://leasedesk.ptchr-dev.nl/api/v1/car
        "chassis_number": null,
        "brand": "Opel",
        "type": "Corsa",
-       "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16'",
+       "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16",
        "description": "Modelreeks, informatie, etc",
        "body_type": null,
        "fuel_type": null,
@@ -87,7 +87,7 @@ curl "https://leasedesk.ptchr-dev.nl/api/v1/car
         { "url" : "http://google.com/image.jpg" },
         { "url" : "http://google.com/image2.jpg" },
         { "url" : "http://google.com/image3.jpg" }
-       ],
+       ]
    }
 ```
 
@@ -118,7 +118,7 @@ curl "https://leasedesk.ptchr-dev.nl/api/v1/car
         "chassis_number": null,
         "brand": "Opel",
         "type": "Corsa",
-        "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16 KEIGAAF",
+        "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16",
         "description": "Modelreeks, informatie, etc",
         "body_type": null,
         "fuel_type": null,
@@ -268,7 +268,7 @@ curl "https://leasedesk.ptchr-dev.nl/api/v1/car/<ID>
        "chassis_number": null,
        "brand": "Opel",
        "type": "Corsa",
-       "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16'",
+       "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16",
        "description": "Modelreeks, informatie, etc",
        "body_type": null,
        "fuel_type": null,
@@ -340,7 +340,7 @@ curl "https://leasedesk.ptchr-dev.nl/api/v1/car/<ID>
         { "url" : "http://google.com/image.jpg" },
         { "url" : "http://google.com/image2.jpg" },
         { "url" : "http://google.com/image3.jpg" }
-       ],
+       ]
    }
 ```
 
@@ -371,7 +371,7 @@ curl "https://leasedesk.ptchr-dev.nl/api/v1/car/<ID>
         "chassis_number": null,
         "brand": "Opel",
         "type": "Corsa",
-        "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16 KEIGAAF",
+        "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16",
         "description": "Modelreeks, informatie, etc",
         "body_type": null,
         "fuel_type": null,
@@ -519,37 +519,11 @@ curl "https://leasedesk.ptchr-dev.nl/api/v1/car"
 {
     "data": [
         {
-            "id": 1,
-            "advertiser_id": "test_124",
-            "name": "Autobedrijf Janssen",
-            "street": "Stationstraat",
-            "number": "10",
-            "number_extra": "a",
-            "zipcode": "1234AB",
-            "city": "Maastricht",
-            "country": "Nederland",
-            "phone": "+31 40 123 45 67",
-            "email": "info@autobedrijfjassen.nl",
-            "web": "http://autobedrijfjanssen.nl",
-            "created_at": "20-02-2018 09:47:22",
-            "updated_at": "20-02-2018 09:47:22"
+            /*full car response*/
         },
         {
-            "id": 2,
-            "advertiser_id": "test_123",
-            "name": "Autobedrijf Peters",
-            "street": "Helmweg",
-            "number": "7",
-            "number_extra": "",
-            "zipcode": "9876XZ",
-            "city": "Hengelo",
-            "country": "Nederland",
-            "phone": "+31 40 987 65 43",
-            "email": "info@autobedrijfpeters.nl",
-            "web": "http://autobedrijfpeters.nl",
-            "created_at": "20-02-2018 09:47:22",
-            "updated_at": "20-02-2018 09:47:22"
-        },
+            /*full car2 response*/
+        }
     ]
 }
 ```
@@ -602,7 +576,7 @@ curl "https://leasedesk.ptchr-dev.nl/api/v1/car/1"
         "chassis_number": null,
         "brand": "Opel",
         "type": "Corsa",
-        "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16 KEIGAAF",
+        "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16",
         "description": "Modelreeks, informatie, etc",
         "body_type": null,
         "fuel_type": null,
