@@ -317,16 +317,16 @@
 <p>The API has a staging environment to test your integration and a production environment for exchanging live data. Both environments come with their own authentication tokens, so please make sure you&#39;ve received or requested access to the environment you want to use.</p>
 <h3 id='environment-base-urls'>Environment base URLs</h3>
 <ul>
-<li><strong>Production</strong> - <code>unknown</code></li>
-<li><strong>Staging environment</strong> - <code>https://leasedesk.ptchr-dev.nl/</code></li>
+<li><strong>Production</strong> - <code>https://financial.leasedesk.nl</code></li>
+<li><strong>Staging environment</strong> - <code>https://staging.financial.leasedesk.nl/</code></li>
 </ul>
 <h3 id='current-version'>Current version</h3>
-<p>The current version of our API is v1, please prefix all routes using <code>api/v1/</code>, for example <code>https://leasedesk.ptchr-dev.nl/api/v1/user</code>.</p>
+<p>The current version of our API is v1, please prefix all routes using <code>api/v1/</code>, for example <code>https://staging.financial.leasedesk.nl/api/v1/user</code>.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authenticate, use this code:</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://ptchr-bdlease-hexon.dev/oauth/token"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/oauth/token"</span>
   -X POST
   -H <span class="s2">"Accept: application/json"</span> 
   -d <span class="s2">"grant_type=client_credentials&amp;client_id=&lt;your_client_id&gt;&amp;client_secret=&lt;your_client_secret&gt;"</span>
@@ -342,7 +342,7 @@
 </span></code></pre>
 <p>Getting authorised to use the API is as easy as requesting an access token using the Client ID and Client Secret codes you were handed by us.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>POST https://ptchr-bdlease-hexon.dev/oauth/token</code> </p>
+<p><code>POST https://staging.financial.leasedesk.nl/oauth/token</code> </p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -383,7 +383,7 @@ Make sure to replace with your client ID and Client Secret with the ones for the
   -H <span class="s2">"Authorization: Bearer &lt;token&gt;"</span> 
 </code></pre>
 <p>To authorize each next request when using the API you have to add the access_token to the header of your request. Also make sure you send the &quot;Accept: application/json&quot; header, this header is used by our system to render errors within the system in json instead of serving HTTP responses containing HTML.</p>
-<h1 id='advertisers'>Advertisers</h1><h2 id='create-an-advertiser'>Create an Advertiser</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/advertiser
+<h1 id='advertisers'>Advertisers</h1><h2 id='create-an-advertiser'>Create an Advertiser</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/advertiser
     -X POST
     -H "</span>Authorization: &lt;your_access_token&gt;<span class="s2">"
     -H "</span>Content-Type: application/json<span class="s2">"
@@ -428,7 +428,7 @@ Make sure to replace with your client ID and Client Secret with the ones for the
 
 <aside class="warning">Make sure you send the json payload as raw body data to the endpoint.</aside>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>POST https://leasedesk.ptchr-dev.nl/api/v1/advertiser/create</code></p>
+<p><code>POST https://staging.financial.leasedesk.nl/api/v1/advertiser/create</code></p>
 <h3 id='raw-body-parameters-json'>Raw Body Parameters (JSON)</h3>
 <table><thead>
 <tr>
@@ -505,7 +505,7 @@ Make sure to replace with your client ID and Client Secret with the ones for the
 <td><em>valid URL</em></td>
 </tr>
 </tbody></table>
-<h2 id='update-an-advertiser'>Update an Advertiser</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/advertiser/&lt;ID&gt;
+<h2 id='update-an-advertiser'>Update an Advertiser</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/advertiser/&lt;ID&gt;
     -X POST
     -H "</span>Authorization: &lt;your_access_token&gt;<span class="s2">"
     -H "</span>Content-Type: application/json<span class="s2">"
@@ -550,7 +550,7 @@ Make sure to replace with your client ID and Client Secret with the ones for the
 
 <aside class="warning">Make sure you send the json payload as raw body data to the endpoint.</aside>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>PUT https://leasedesk.ptchr-dev.nl/api/v1/advertiser/&lt;ID&gt;</code></p>
+<p><code>PUT https://staging.financial.leasedesk.nl/api/v1/advertiser/&lt;ID&gt;</code></p>
 <h3 id='raw-body-parameters-json-2'>Raw Body Parameters (JSON)</h3>
 <table><thead>
 <tr>
@@ -627,7 +627,7 @@ Make sure to replace with your client ID and Client Secret with the ones for the
 <td><em>valid URL</em></td>
 </tr>
 </tbody></table>
-<h2 id='get-all-advertisers'>Get All Advertisers</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/advertiser"</span>
+<h2 id='get-all-advertisers'>Get All Advertisers</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/advertiser"</span>
   -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
 </code></pre>
 <blockquote>
@@ -672,14 +672,14 @@ Make sure to replace with your client ID and Client Secret with the ones for the
 </span></code></pre>
 <p>This endpoint retrieves all advertisers created by the currently authenticated client.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET https://leasedesk.ptchr-dev.nl/api/v1/advertiser</code></p>
+<p><code>GET https://staging.financial.leasedesk.nl/api/v1/advertiser</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <p>None</p>
 
 <aside class="success">
 Remember — don't forget to authenticate!
 </aside>
-<h2 id='get-a-specific-advertiser'>Get a Specific Advertiser</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/advertiser/1"</span>
+<h2 id='get-a-specific-advertiser'>Get a Specific Advertiser</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/advertiser/1"</span>
   -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
 </code></pre>
 <blockquote>
@@ -708,7 +708,7 @@ Remember — don't forget to authenticate!
 
 <aside class="warning">If you try to get an advertiser that wasn't added by your client a HTTP error will be returned.</aside>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET https://leasedesk.ptchr-dev.nl/api/v1/advertiser/&lt;ID&gt;</code></p>
+<p><code>GET https://staging.financial.leasedesk.nl/api/v1/advertiser/&lt;ID&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -721,7 +721,7 @@ Remember — don't forget to authenticate!
 <td>The ID of the advertiser to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-advertiser'>Delete a Specific Advertiser</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/advertiser/1"</span>
+<h2 id='delete-a-specific-advertiser'>Delete a Specific Advertiser</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/advertiser/1"</span>
   -X DELETE
   -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
 </code></pre>
@@ -734,7 +734,7 @@ Remember — don't forget to authenticate!
 
 <aside class="warning">The JSON response will be empty, when the Advertiser is deleted succesfully a HTTP 200 OK response will be returned.</aside>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>DELETE https://leasedesk.ptchr-dev.nl/api/v1/advertiser/&lt;ID&gt;</code></p>
+<p><code>DELETE https://staging.financial.leasedesk.nl/api/v1/advertiser/&lt;ID&gt;</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -747,7 +747,7 @@ Remember — don't forget to authenticate!
 <td>The ID of the Advertiser to delete</td>
 </tr>
 </tbody></table>
-<h1 id='cars'>Cars</h1><h2 id='create-a-car'>Create a Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/car
+<h1 id='cars'>Cars</h1><h2 id='create-a-car'>Create a Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/car
     -X POST
     -H "</span>Authorization: &lt;your_access_token&gt;<span class="s2">"
     -H "</span>Content-Type: application/json<span class="s2">"
@@ -936,7 +936,7 @@ Remember — don't forget to authenticate!
         </span><span class="p">],</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:39"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:50:27"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://leasedesk.ptchr-dev.nl/aanbod/1"</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://staging.financial.leasedesk.nl/aanbod/1"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -944,7 +944,7 @@ Remember — don't forget to authenticate!
 
 <aside class="warning">Make sure you send the json payload as raw body data to the endpoint. Also remember that the advertiser ID should be equal to the ID returned by your call when creating an Advertiser!</aside>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>POST https://leasedesk.ptchr-dev.nl/api/v1/car/create</code></p>
+<p><code>POST https://staging.financial.leasedesk.nl/api/v1/car/create</code></p>
 <h3 id='raw-body-parameters-json'>Raw Body Parameters (JSON)</h3>
 <table><thead>
 <tr>
@@ -1213,7 +1213,7 @@ Remember — don't forget to authenticate!
 <td><em>array</em></td>
 </tr>
 </tbody></table>
-<h2 id='update-a-car'>Update a Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/car/&lt;ID&gt;
+<h2 id='update-a-car'>Update a Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/car/&lt;ID&gt;
     -X PUT
     -H "</span>Authorization: &lt;your_access_token&gt;<span class="s2">"
     -H "</span>Content-Type: application/json<span class="s2">"
@@ -1401,7 +1401,7 @@ Remember — don't forget to authenticate!
         </span><span class="p">],</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:39"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:50:27"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://leasedesk.ptchr-dev.nl/aanbod/1"</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://staging.financial.leasedesk.nl/aanbod/1"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -1409,7 +1409,7 @@ Remember — don't forget to authenticate!
 
 <aside class="warning">Make sure you send the json payload as raw body data to the endpoint.</aside>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>PUT https://leasedesk.ptchr-dev.nl/api/v1/car/&lt;ID&gt;</code></p>
+<p><code>PUT https://staging.financial.leasedesk.nl/api/v1/car/&lt;ID&gt;</code></p>
 <h3 id='raw-body-parameters-json-2'>Raw Body Parameters (JSON)</h3>
 <table><thead>
 <tr>
@@ -1672,7 +1672,7 @@ Remember — don't forget to authenticate!
 <td><em>array</em></td>
 </tr>
 </tbody></table>
-<h2 id='get-all-cars'>Get All Cars</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/car"</span>
+<h2 id='get-all-cars'>Get All Cars</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/car"</span>
   -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
 </code></pre>
 <blockquote>
@@ -1691,14 +1691,14 @@ Remember — don't forget to authenticate!
 </span></code></pre>
 <p>This endpoint retrieves all Cars created by the currently authenticated client.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET https://leasedesk.ptchr-dev.nl/api/v1/car</code></p>
+<p><code>GET https://staging.financial.leasedesk.nl/api/v1/car</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <p>None</p>
 
 <aside class="success">
 Remember — don't forget to authenticate!
 </aside>
-<h2 id='get-a-specific-car'>Get a Specific Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/car/1"</span>
+<h2 id='get-a-specific-car'>Get a Specific Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/car/1"</span>
   -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
 </code></pre>
 <blockquote>
@@ -1803,7 +1803,7 @@ Remember — don't forget to authenticate!
         </span><span class="p">],</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:39"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:50:27"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://leasedesk.ptchr-dev.nl/aanbod/1"</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://staging.financial.leasedesk.nl/aanbod/1"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -1811,7 +1811,7 @@ Remember — don't forget to authenticate!
 
 <aside class="warning">If you try to get an advertiser that wasn't added by your client a HTTP error will be returned.</aside>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET https://leasedesk.ptchr-dev.nl/api/v1/car/&lt;ID&gt;</code></p>
+<p><code>GET https://staging.financial.leasedesk.nl/api/v1/car/&lt;ID&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -1824,7 +1824,7 @@ Remember — don't forget to authenticate!
 <td>The ID of the Car to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-car'>Delete a Specific Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://leasedesk.ptchr-dev.nl/api/v1/car/1"</span>
+<h2 id='delete-a-specific-car'>Delete a Specific Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/car/1"</span>
   -X DELETE
   -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
 </code></pre>
@@ -1837,7 +1837,7 @@ Remember — don't forget to authenticate!
 
 <aside class="warning">The JSON response will be empty, when the Car is deleted succesfully a HTTP 200 OK response will be returned.</aside>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>DELETE https://leasedesk.ptchr-dev.nl/api/v1/car/&lt;ID&gt;</code></p>
+<p><code>DELETE https://staging.financial.leasedesk.nl/api/v1/car/&lt;ID&gt;</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
