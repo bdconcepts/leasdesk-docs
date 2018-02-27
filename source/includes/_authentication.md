@@ -3,7 +3,7 @@
 > To authenticate, use this code:
 
 ```shell
-curl "https://ptchr-bdlease-hexon.dev/oauth/token"
+curl "https://staging.financial.leasedesk.nl/oauth/token"
   -X POST
   -H "Accept: application/json" 
   -d "grant_type=client_credentials&client_id=<your_client_id>&client_secret=<your_client_secret>"
@@ -23,7 +23,7 @@ Getting authorised to use the API is as easy as requesting an access token using
 
 ### HTTP Request
 
-`POST https://ptchr-bdlease-hexon.dev/oauth/token` 
+`POST https://staging.financial.leasedesk.nl/oauth/token` 
 
 ### Query Parameters
 

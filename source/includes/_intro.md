@@ -8,9 +8,9 @@ The API has a staging environment to test your integration and a production envi
 
 ### Environment base URLs
 
-  - **Production** - `unknown`
-  - **Staging environment** - `https://leasedesk.ptchr-dev.nl/`
+  - **Production** - `https://financial.leasedesk.nl`
+  - **Staging environment** - `https://staging.financial.leasedesk.nl/`
 
 ### Current version
 
-The current version of our API is v1, please prefix all routes using `api/v1/`, for example `https://leasedesk.ptchr-dev.nl/api/v1/user`.
+The current version of our API is v1, please prefix all routes using `api/v1/`, for example `https://staging.financial.leasedesk.nl/api/v1/user`.

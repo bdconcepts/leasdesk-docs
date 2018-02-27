@@ -3,7 +3,7 @@
 ## Create a Car
 
 ```shell
-curl "https://leasedesk.ptchr-dev.nl/api/v1/car
+curl "https://staging.financial.leasedesk.nl/api/v1/car
     -X POST
     -H "Authorization: <your_access_token>"
     -H "Content-Type: application/json"
@@ -193,7 +193,7 @@ curl "https://leasedesk.ptchr-dev.nl/api/v1/car
         ],
         "created_at": "20-02-2018 09:47:39",
         "updated_at": "20-02-2018 09:50:27",
-        "url": "http://leasedesk.ptchr-dev.nl/aanbod/1"
+        "url": "http://staging.financial.leasedesk.nl/aanbod/1"
     }
 }
 ```
@@ -204,7 +204,7 @@ This endpoint creates a new Car.
 
 ### HTTP Request
 
-`POST https://leasedesk.ptchr-dev.nl/api/v1/car/create`
+`POST https://staging.financial.leasedesk.nl/api/v1/car/create`
 
 ### Raw Body Parameters (JSON)
 
@@ -257,7 +257,7 @@ accessories | Array of accessores (see below) | No | *array*
 ## Update a Car
 
 ```shell
-curl "https://leasedesk.ptchr-dev.nl/api/v1/car/<ID>
+curl "https://staging.financial.leasedesk.nl/api/v1/car/<ID>
     -X PUT
     -H "Authorization: <your_access_token>"
     -H "Content-Type: application/json"
@@ -446,7 +446,7 @@ curl "https://leasedesk.ptchr-dev.nl/api/v1/car/<ID>
         ],
         "created_at": "20-02-2018 09:47:39",
         "updated_at": "20-02-2018 09:50:27",
-        "url": "http://leasedesk.ptchr-dev.nl/aanbod/1"
+        "url": "http://staging.financial.leasedesk.nl/aanbod/1"
     }
 }
 ```
@@ -457,7 +457,7 @@ This endpoint updates an existing Car.
 
 ### HTTP Request
 
-`PUT https://leasedesk.ptchr-dev.nl/api/v1/car/<ID>`
+`PUT https://staging.financial.leasedesk.nl/api/v1/car/<ID>`
 
 ### Raw Body Parameters (JSON)
 
@@ -509,7 +509,7 @@ accessories | Array of accessores (see below) | No | *array*
 ## Get All Cars
 
 ```shell
-curl "https://leasedesk.ptchr-dev.nl/api/v1/car"
+curl "https://staging.financial.leasedesk.nl/api/v1/car"
   -H "Authorization: <your_access_token>"
 ```
 
@@ -532,7 +532,7 @@ This endpoint retrieves all Cars created by the currently authenticated client.
 
 ### HTTP Request
 
-`GET https://leasedesk.ptchr-dev.nl/api/v1/car`
+`GET https://staging.financial.leasedesk.nl/api/v1/car`
 
 ### Query Parameters
 
@@ -545,7 +545,7 @@ Remember — don't forget to authenticate!
 ## Get a Specific Car
 
 ```shell
-curl "https://leasedesk.ptchr-dev.nl/api/v1/car/1"
+curl "https://staging.financial.leasedesk.nl/api/v1/car/1"
   -H "Authorization: <your_access_token>"
 ```
 
@@ -651,7 +651,7 @@ curl "https://leasedesk.ptchr-dev.nl/api/v1/car/1"
         ],
         "created_at": "20-02-2018 09:47:39",
         "updated_at": "20-02-2018 09:50:27",
-        "url": "http://leasedesk.ptchr-dev.nl/aanbod/1"
+        "url": "http://staging.financial.leasedesk.nl/aanbod/1"
     }
 }
 ```
@@ -662,7 +662,7 @@ This endpoint retrieves a specific Car.
 
 ### HTTP Request
 
-`GET https://leasedesk.ptchr-dev.nl/api/v1/car/<ID>`
+`GET https://staging.financial.leasedesk.nl/api/v1/car/<ID>`
 
 ### URL Parameters
 
@@ -673,7 +673,7 @@ ID | The ID of the Car to retrieve
 ## Delete a Specific Car
 
 ```shell
-curl "https://leasedesk.ptchr-dev.nl/api/v1/car/1"
+curl "https://staging.financial.leasedesk.nl/api/v1/car/1"
   -X DELETE
   -H "Authorization: <your_access_token>"
 ```
@@ -690,7 +690,7 @@ This endpoint deletes a specific Car.
 
 ### HTTP Request
 
-`DELETE https://leasedesk.ptchr-dev.nl/api/v1/car/<ID>`
+`DELETE https://staging.financial.leasedesk.nl/api/v1/car/<ID>`
 
 ### URL Parameters
 
