@@ -30,6 +30,7 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car
        "mileage_type": "KM",
        "nap_valid": false,
        "engine_cylinders": null,
+       "engine_capacity": null,
        "engine_power": 74,
        "engine_power_type": "KW",
        "engine_top_speed": 180,
@@ -133,6 +134,7 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car
         "mileage_type": "KM",
         "nap_valid": false,
         "engine_cylinders": null,
+        "engine_capacity": null,
         "engine_power": 74,
         "engine_power_type": "KW",
         "engine_top_speed": 180,
@@ -231,6 +233,7 @@ mileage | The mileage amount | Yes | *integer*
 mileage_type | The mileage type (see below) | Yes | *in: KM,M*
 doors | The number of doors | No | *integer*
 engine_cylinders | The number of cylinders | No | *integer*
+engine_capacity | Engine capacity in cc | No | *integer*
 engine_power | The power of the engine | Yes | *integer*
 engine_power_type | The power type (see below) | Yes | *in: PK,KW*
 engine_top_speed | The top speed of the vehicle | No | *integer*
@@ -283,6 +286,7 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/<ID>
        "mileage_type": "KM",
        "nap_valid": false,
        "engine_cylinders": null,
+       "engine_capacity": null,
        "engine_power": 74,
        "engine_power_type": "KW",
        "engine_top_speed": 180,
@@ -386,6 +390,7 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/<ID>
         "mileage_type": "KM",
         "nap_valid": false,
         "engine_cylinders": null,
+        "engine_capacity": null,
         "engine_power": 74,
         "engine_power_type": "KW",
         "engine_top_speed": 180,
@@ -483,6 +488,7 @@ mileage | The mileage amount | Yes | *integer*
 mileage_type | The mileage type (see below) | Yes | *in: KM,M*
 doors | The number of doors | No | *integer*
 engine_cylinders | The number of cylinders | No | *integer*
+engine_capacity | Engine capacity in cc | No | *integer*
 engine_power | The power of the engine | Yes | *integer*
 engine_power_type | The power type (see below) | Yes | *in: PK,KW*
 engine_top_speed | The top speed of the vehicle | No | *integer*
@@ -591,6 +597,7 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/1"
         "mileage_type": "KM",
         "nap_valid": false,
         "engine_cylinders": null,
+        "engine_capacity": null,
         "engine_power": 74,
         "engine_power_type": "KW",
         "engine_top_speed": 180,
