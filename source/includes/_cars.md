@@ -9,28 +9,27 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car
     -H "Content-Type: application/json"
     -H "Accept: application/json"
     --data {
-       "car_id": "321413954",
-       "advertiser": 1,
+       "advertiser_id": 1,
        "license_plate_number": "PD839Z",
        "chassis_number": null,
        "brand": "Opel",
        "type": "Corsa",
        "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16",
        "description": "Modelreeks, informatie, etc",
-       "body_type": null,
-       "fuel_type": null,
+       "body_type": "HB",
+       "fuel_type": "B",
        "fuel_consumption_city": "16",
        "fuel_consumption_highway": "23",
        "fuel_consumption_combined": "20",
-       "transmission_type": null,
+       "transmission_type": "H",
        "transmission_amount": 5,
        "color": "geel",
        "color_brand": null,
        "mileage": 59638,
        "mileage_type": "KM",
        "nap_valid": false,
-       "engine_cylinders": null,
-       "engine_capacity": null,
+       "engine_cylinders": 4,
+       "engine_capacity": 1600,
        "engine_power": 74,
        "engine_power_type": "KW",
        "engine_top_speed": 180,
@@ -85,9 +84,9 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car
            }
        ],
        "images": [
-        { "url" : "http://google.com/image.jpg" },
-        { "url" : "http://google.com/image2.jpg" },
-        { "url" : "http://google.com/image3.jpg" }
+        "http://google.com/image.jpg",
+        "http://google.com/image2.jpg",
+        "http://google.com/image3.jpg"
        ]
    }
 ```
@@ -98,7 +97,6 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car
 {
     "data": {
         "id": 1,
-        "car_id": "321413954",
         "advertiser": {
             "id": 1,
             "advertiser_id": "test_124",
@@ -121,20 +119,20 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car
         "type": "Corsa",
         "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16",
         "description": "Modelreeks, informatie, etc",
-        "body_type": null,
-        "fuel_type": null,
+        "body_type": "HB",
+        "fuel_type": "B",
         "fuel_consumption_city": 16,
         "fuel_consumption_highway": 23,
         "fuel_consumption_combined": 20,
-        "transmission_type": null,
+        "transmission_type": "H",
         "transmission_amount": 5,
         "color": "geel",
         "color_brand": null,
         "mileage": 59638,
         "mileage_type": "KM",
         "nap_valid": false,
-        "engine_cylinders": null,
-        "engine_capacity": null,
+        "engine_cylinders": 4,
+        "engine_capacity": 1600,
         "engine_power": 74,
         "engine_power_type": "KW",
         "engine_top_speed": 180,
@@ -191,7 +189,7 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car
         "images": [
             "http://google.com/image.jpg",
             "http://google.com/image2.jpg",
-            "http://google.com/image3.jpg",
+            "http://google.com/image3.jpg"
         ],
         "created_at": "20-02-2018 09:47:39",
         "updated_at": "20-02-2018 09:50:27",
@@ -213,7 +211,6 @@ This endpoint creates a new Car.
 Parameter | Description | Required | Validation
 --------- | ----------- | -------- | ----------
 advertiser_id | The ID a given by the Advertiser endpoint | Yes | *existing ID as returned by Advertiser endpoint*
-car_id | The car ID from your own database | Yes | *Must be unique (not previously added)*
 license_plate_number | The license plate number | Yes | 
 brand | The brand name | Yes | 
 type | The type name | Yes | 
@@ -266,27 +263,27 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/<ID>
     -H "Content-Type: application/json"
     -H "Accept: application/json"
     --data {
-       "advertiser": 1,
+       "advertiser_id": 1,
        "license_plate_number": "AABB11",
        "chassis_number": null,
        "brand": "Opel",
        "type": "Corsa",
        "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16",
        "description": "Modelreeks, informatie, etc",
-       "body_type": null,
-       "fuel_type": null,
+       "body_type": "HB",
+       "fuel_type": "B",
        "fuel_consumption_city": "16",
        "fuel_consumption_highway": "23",
        "fuel_consumption_combined": "20",
-       "transmission_type": null,
+       "transmission_type": "H",
        "transmission_amount": 5,
        "color": "geel",
        "color_brand": null,
        "mileage": 59638,
        "mileage_type": "KM",
        "nap_valid": false,
-       "engine_cylinders": null,
-       "engine_capacity": null,
+       "engine_cylinders": 4,
+       "engine_capacity": 1600,
        "engine_power": 74,
        "engine_power_type": "KW",
        "engine_top_speed": 180,
@@ -341,9 +338,9 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/<ID>
            }
        ],
        "images": [
-        { "url" : "http://google.com/image.jpg" },
-        { "url" : "http://google.com/image2.jpg" },
-        { "url" : "http://google.com/image3.jpg" }
+        "http://google.com/image.jpg",
+        "http://google.com/image2.jpg",
+        "http://google.com/image3.jpg"
        ]
    }
 ```
@@ -354,10 +351,8 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/<ID>
 {
     "data": {
         "id": 1,
-        "car_id": "321413954",
         "advertiser": {
             "id": 1,
-            "advertiser_id": "test_124",
             "name": "Autobedrijf Janssen",
             "street": "Stationstraat",
             "number": "10",
@@ -377,20 +372,20 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/<ID>
         "type": "Corsa",
         "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16",
         "description": "Modelreeks, informatie, etc",
-        "body_type": null,
-        "fuel_type": null,
+        "body_type": "HB",
+        "fuel_type": "B",
         "fuel_consumption_city": 16,
         "fuel_consumption_highway": 23,
         "fuel_consumption_combined": 20,
-        "transmission_type": null,
+        "transmission_type": "H",
         "transmission_amount": 5,
         "color": "geel",
         "color_brand": null,
         "mileage": 59638,
         "mileage_type": "KM",
         "nap_valid": false,
-        "engine_cylinders": null,
-        "engine_capacity": null,
+        "engine_cylinders": 4,
+        "engine_capacity": 1600,
         "engine_power": 74,
         "engine_power_type": "KW",
         "engine_top_speed": 180,
@@ -447,7 +442,7 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/<ID>
         "images": [
             "http://google.com/image.jpg",
             "http://google.com/image2.jpg",
-            "http://google.com/image3.jpg",
+            "http://google.com/image3.jpg"
         ],
         "created_at": "20-02-2018 09:47:39",
         "updated_at": "20-02-2018 09:50:27",
@@ -561,10 +556,8 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/1"
 {
     "data": {
         "id": 1,
-        "car_id": "321413954",
         "advertiser": {
             "id": 1,
-            "advertiser_id": "test_124",
             "name": "Autobedrijf Janssen",
             "street": "Stationstraat",
             "number": "10",
@@ -584,20 +577,20 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/1"
         "type": "Corsa",
         "serie": "1.4-16V DESIGN EDITION 5-Drs Airco LM16",
         "description": "Modelreeks, informatie, etc",
-        "body_type": null,
-        "fuel_type": null,
+        "body_type": "HB",
+        "fuel_type": "B",
         "fuel_consumption_city": 16,
         "fuel_consumption_highway": 23,
         "fuel_consumption_combined": 20,
-        "transmission_type": null,
+        "transmission_type": "H",
         "transmission_amount": 5,
         "color": "geel",
         "color_brand": null,
         "mileage": 59638,
         "mileage_type": "KM",
         "nap_valid": false,
-        "engine_cylinders": null,
-        "engine_capacity": null,
+        "engine_cylinders": 4,
+        "engine_capacity": 1600,
         "engine_power": 74,
         "engine_power_type": "KW",
         "engine_top_speed": 180,
@@ -654,7 +647,7 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/1"
         "images": [
             "http://google.com/image.jpg",
             "http://google.com/image2.jpg",
-            "http://google.com/image3.jpg",
+            "http://google.com/image3.jpg"
         ],
         "created_at": "20-02-2018 09:47:39",
         "updated_at": "20-02-2018 09:50:27",

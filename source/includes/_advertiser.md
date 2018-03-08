@@ -9,7 +9,6 @@ curl "https://staging.financial.leasedesk.nl/api/v1/advertiser
     -H "Content-Type: application/json"
     -H "Accept: application/json"
     --data {
-        "advertiser_id": "test_124",
         "name": "Autobedrijf Janssen",
         "street": "Stationstraat",
         "number": "10",
@@ -29,7 +28,6 @@ curl "https://staging.financial.leasedesk.nl/api/v1/advertiser
 {
     "data": {
         "id": 1,
-        "advertiser_id": "test_124",
         "name": "Autobedrijf Janssen",
         "street": "Stationstraat",
         "number": "10",
@@ -58,7 +56,6 @@ This endpoint creates a new Advertiser.
 
 Parameter | Description | Required | Validation Rules
 --------- | ----------- | -------- | ----------------
-advertiser_id | The ID of the advertiser as it's in your own system | yes | *none*
 name | Name of the Advertiser | yes | *none*
 street | Street of the Advertiser | no | *max 255 chars*
 number | Housenumber of the Advertiser | no | *max 255 chars*
@@ -79,7 +76,6 @@ curl "https://staging.financial.leasedesk.nl/api/v1/advertiser/<ID>
     -H "Content-Type: application/json"
     -H "Accept: application/json"
     --data {
-        "advertiser_id": "test_124",
         "name": "Autobedrijf Nieuw",
         "street": "Stationstraat",
         "number": "10",
@@ -99,7 +95,6 @@ curl "https://staging.financial.leasedesk.nl/api/v1/advertiser/<ID>
 {
     "data": {
         "id": 1,
-        "advertiser_id": "test_124",
         "name": "Autobedrijf Nieuw",
         "street": "Stationstraat",
         "number": "10",
@@ -128,7 +123,6 @@ This endpoint updates an existing Advertiser.
 
 Parameter | Description | Required | Validation Rules
 --------- | ----------- | -------- | ----------------
-advertiser_id | The ID of the advertiser as it's in your own system | yes | *none*
 name | Name of the Advertiser | yes | *none*
 street | Street of the Advertiser | no | *max 255 chars*
 number | Housenumber of the Advertiser | no | *max 255 chars*
@@ -154,7 +148,6 @@ curl "https://staging.financial.leasedesk.nl/api/v1/advertiser"
     "data": [
         {
             "id": 1,
-            "advertiser_id": "test_124",
             "name": "Autobedrijf Janssen",
             "street": "Stationstraat",
             "number": "10",
@@ -170,7 +163,6 @@ curl "https://staging.financial.leasedesk.nl/api/v1/advertiser"
         },
         {
             "id": 2,
-            "advertiser_id": "test_123",
             "name": "Autobedrijf Peters",
             "street": "Helmweg",
             "number": "7",
@@ -215,7 +207,6 @@ curl "https://staging.financial.leasedesk.nl/api/v1/advertiser/1"
 {
     "data": {
         "id": 1,
-        "advertiser_id": "test_124",
         "name": "Autobedrijf Janssen",
         "street": "Stationstraat",
         "number": "10",
