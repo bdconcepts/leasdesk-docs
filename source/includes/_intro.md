@@ -8,7 +8,7 @@ The API has a staging environment to test your integration and a production envi
 
 ### Environment base URLs
 
-  - **Production** - `https://financial.leasedesk.nl`
+  - **Production** - `https://aanbod.financial.leasedesk.nl`
   - **Staging environment** - `https://staging.financial.leasedesk.nl/`
 
 ### Current version
