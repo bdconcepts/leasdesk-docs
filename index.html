@@ -352,7 +352,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>grand_type</td>
+<td>grant_type</td>
 <td>none</td>
 <td>Set to client_credentials</td>
 </tr>
@@ -383,9 +383,9 @@ Make sure to replace with your client ID and Client Secret with the ones for the
   -H <span class="s2">"Authorization: Bearer &lt;token&gt;"</span> 
 </code></pre>
 <p>To authorize each next request when using the API you have to add the access_token to the header of your request. Also make sure you send the &quot;Accept: application/json&quot; header, this header is used by our system to render errors within the system in json instead of serving HTTP responses containing HTML.</p>
-<h1 id='advertisers'>Advertisers</h1><h2 id='create-an-advertiser'>Create an Advertiser</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/advertiser
+<h1 id='advertisers'>Advertisers</h1><h2 id='create-an-advertiser'>Create an Advertiser</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/advertiser/create
     -X POST
-    -H "</span>Authorization: &lt;your_access_token&gt;<span class="s2">"
+    -H "</span>Authorization: Bearer &lt;your_access_token&gt;<span class="s2">"
     -H "</span>Content-Type: application/json<span class="s2">"
     -H "</span>Accept: application/json<span class="s2">"
     --data {
@@ -499,7 +499,7 @@ Make sure to replace with your client ID and Client Secret with the ones for the
 </tbody></table>
 <h2 id='update-an-advertiser'>Update an Advertiser</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/advertiser/&lt;ID&gt;
     -X POST
-    -H "</span>Authorization: &lt;your_access_token&gt;<span class="s2">"
+    -H "</span>Authorization: Bearer &lt;your_access_token&gt;<span class="s2">"
     -H "</span>Content-Type: application/json<span class="s2">"
     -H "</span>Accept: application/json<span class="s2">"
     --data {
@@ -612,7 +612,7 @@ Make sure to replace with your client ID and Client Secret with the ones for the
 </tr>
 </tbody></table>
 <h2 id='get-all-advertisers'>Get All Advertisers</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/advertiser"</span>
-  -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
+  -H <span class="s2">"Authorization: Bearer &lt;your_access_token&gt;"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -662,7 +662,7 @@ Make sure to replace with your client ID and Client Secret with the ones for the
 Remember — don't forget to authenticate!
 </aside>
 <h2 id='get-a-specific-advertiser'>Get a Specific Advertiser</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/advertiser/1"</span>
-  -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
+  -H <span class="s2">"Authorization: Bearer &lt;your_access_token&gt;"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -704,7 +704,7 @@ Remember — don't forget to authenticate!
 </tbody></table>
 <h2 id='delete-a-specific-advertiser'>Delete a Specific Advertiser</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/advertiser/1"</span>
   -X DELETE
-  -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
+  -H <span class="s2">"Authorization: Bearer &lt;your_access_token&gt;"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -728,9 +728,9 @@ Remember — don't forget to authenticate!
 <td>The ID of the Advertiser to delete</td>
 </tr>
 </tbody></table>
-<h1 id='cars'>Cars</h1><h2 id='create-a-car'>Create a Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/car
+<h1 id='cars'>Cars</h1><h2 id='create-a-car'>Create a Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/car/create
     -X POST
-    -H "</span>Authorization: &lt;your_access_token&gt;<span class="s2">"
+    -H "</span>Authorization: Bearer &lt;your_access_token&gt;<span class="s2">"
     -H "</span>Content-Type: application/json<span class="s2">"
     -H "</span>Accept: application/json<span class="s2">"
     --data {
@@ -1196,7 +1196,7 @@ Remember — don't forget to authenticate!
 </tbody></table>
 <h2 id='update-a-car'>Update a Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/car/&lt;ID&gt;
     -X PUT
-    -H "</span>Authorization: &lt;your_access_token&gt;<span class="s2">"
+    -H "</span>Authorization: Bearer &lt;your_access_token&gt;<span class="s2">"
     -H "</span>Content-Type: application/json<span class="s2">"
     -H "</span>Accept: application/json<span class="s2">"
     --data {
@@ -1625,7 +1625,7 @@ Remember — don't forget to authenticate!
 <tr>
 <td>tax_benefit</td>
 <td>Tax benefit class in percent</td>
-<td>Yes</td>
+<td>No</td>
 <td><em>numeric</em></td>
 </tr>
 <tr>
@@ -1660,7 +1660,7 @@ Remember — don't forget to authenticate!
 </tr>
 </tbody></table>
 <h2 id='get-all-cars'>Get All Cars</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/car"</span>
-  -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
+  -H <span class="s2">"Authorization: Bearer &lt;your_access_token&gt;"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -1686,7 +1686,7 @@ Remember — don't forget to authenticate!
 Remember — don't forget to authenticate!
 </aside>
 <h2 id='get-a-specific-car'>Get a Specific Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/car/1"</span>
-  -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
+  -H <span class="s2">"Authorization: Bearer &lt;your_access_token&gt;"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -1812,7 +1812,7 @@ Remember — don't forget to authenticate!
 </tbody></table>
 <h2 id='delete-a-specific-car'>Delete a Specific Car</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://staging.financial.leasedesk.nl/api/v1/car/1"</span>
   -X DELETE
-  -H <span class="s2">"Authorization: &lt;your_access_token&gt;"</span>
+  -H <span class="s2">"Authorization: Bearer &lt;your_access_token&gt;"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
