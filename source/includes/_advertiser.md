@@ -3,9 +3,9 @@
 ## Create an Advertiser
 
 ```shell
-curl "https://staging.financial.leasedesk.nl/api/v1/advertiser
+curl "https://staging.financial.leasedesk.nl/api/v1/advertiser/create
     -X POST
-    -H "Authorization: <your_access_token>"
+    -H "Authorization: Bearer <your_access_token>"
     -H "Content-Type: application/json"
     -H "Accept: application/json"
     --data {
@@ -72,7 +72,7 @@ web | Website address of the Advertiser | no | *valid URL*
 ```shell
 curl "https://staging.financial.leasedesk.nl/api/v1/advertiser/<ID>
     -X POST
-    -H "Authorization: <your_access_token>"
+    -H "Authorization: Bearer <your_access_token>"
     -H "Content-Type: application/json"
     -H "Accept: application/json"
     --data {
@@ -138,7 +138,7 @@ web | Website address of the Advertiser | no | *valid URL*
 
 ```shell
 curl "https://staging.financial.leasedesk.nl/api/v1/advertiser"
-  -H "Authorization: <your_access_token>"
+  -H "Authorization: Bearer <your_access_token>"
 ```
 
 > The above command returns JSON structured like this:
@@ -198,7 +198,7 @@ Remember — don't forget to authenticate!
 
 ```shell
 curl "https://staging.financial.leasedesk.nl/api/v1/advertiser/1"
-  -H "Authorization: <your_access_token>"
+  -H "Authorization: Bearer <your_access_token>"
 ```
 
 > The above command returns JSON structured like this:
@@ -242,7 +242,7 @@ ID | The ID of the advertiser to retrieve
 ```shell
 curl "https://staging.financial.leasedesk.nl/api/v1/advertiser/1"
   -X DELETE
-  -H "Authorization: <your_access_token>"
+  -H "Authorization: Bearer <your_access_token>"
 ```
 
 > The above command returns JSON structured like this:

@@ -3,9 +3,9 @@
 ## Create a Car
 
 ```shell
-curl "https://staging.financial.leasedesk.nl/api/v1/car
+curl "https://staging.financial.leasedesk.nl/api/v1/car/create
     -X POST
-    -H "Authorization: <your_access_token>"
+    -H "Authorization: Bearer <your_access_token>"
     -H "Content-Type: application/json"
     -H "Accept: application/json"
     --data {
@@ -259,7 +259,7 @@ accessories | Array of accessores (see below) | No | *array*
 ```shell
 curl "https://staging.financial.leasedesk.nl/api/v1/car/<ID>
     -X PUT
-    -H "Authorization: <your_access_token>"
+    -H "Authorization: Bearer <your_access_token>"
     -H "Content-Type: application/json"
     -H "Accept: application/json"
     --data {
@@ -500,7 +500,7 @@ emission_co2 | The co2 emission in g/km | No | *integer*
 seats | The amount of seats | No | *integer*
 load_capacity | The load capacity in Liter | No | *integer*
 weight | The weight in kilogram | Yes | *integer*
-tax_benefit | Tax benefit class in percent | Yes | *numeric*
+tax_benefit | Tax benefit class in percent | No | *numeric*
 road_tax_min | Minimum amount of road tax | Yes | *numeric*
 road_tax_max | Maximum amount of road tax | Yes | *numeric*
 images | Array of images (see below) | Yes | *array*
@@ -511,7 +511,7 @@ accessories | Array of accessores (see below) | No | *array*
 
 ```shell
 curl "https://staging.financial.leasedesk.nl/api/v1/car"
-  -H "Authorization: <your_access_token>"
+  -H "Authorization: Bearer <your_access_token>"
 ```
 
 > The above command returns JSON structured like this:
@@ -547,7 +547,7 @@ Remember — don't forget to authenticate!
 
 ```shell
 curl "https://staging.financial.leasedesk.nl/api/v1/car/1"
-  -H "Authorization: <your_access_token>"
+  -H "Authorization: Bearer <your_access_token>"
 ```
 
 > The above command returns JSON structured like this:
@@ -675,7 +675,7 @@ ID | The ID of the Car to retrieve
 ```shell
 curl "https://staging.financial.leasedesk.nl/api/v1/car/1"
   -X DELETE
-  -H "Authorization: <your_access_token>"
+  -H "Authorization: Bearer <your_access_token>"
 ```
 
 > The above command returns JSON structured like this:

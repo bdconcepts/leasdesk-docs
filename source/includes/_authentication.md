@@ -29,7 +29,7 @@ Getting authorised to use the API is as easy as requesting an access token using
 
 Parameter | Default | Description
 --------- | ------- | -----------
-grand_type | none | Set to client_credentials
+grant_type | none | Set to client_credentials
 client_id | none | Use the Client ID you received
 client_secret | none | Use the Client Secret you received
 
