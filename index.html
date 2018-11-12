@@ -735,7 +735,7 @@ Remember — don't forget to authenticate!
     -H "</span>Accept: application/json<span class="s2">"
     --data {
        "</span>advertiser_id<span class="s2">": 1,
-       "</span>license_plate_number<span class="s2">": "</span>PD839Z<span class="s2">",
+       "</span>license_plate_number<span class="s2">": null,
        "</span>chassis_number<span class="s2">": null,
        "</span>brand<span class="s2">": "</span>Opel<span class="s2">",
        "</span><span class="nb">type</span><span class="s2">": "</span>Corsa<span class="s2">",
@@ -764,10 +764,10 @@ Remember — don't forget to authenticate!
        "</span>doors<span class="s2">": 5,
        "</span>seats<span class="s2">": 5,
        "</span>keys_amount<span class="s2">": 2,
-       "</span>weight<span class="s2">": 1063,
+       "</span>weight<span class="s2">": null,
        "</span>construction_date<span class="s2">": "</span>2014-01-01<span class="s2">",
        "</span>apk_due_date<span class="s2">": "</span>2018-11-26<span class="s2">",
-       "</span>price_excl_vat<span class="s2">": 10450,
+       "</span>price_excl_vat<span class="s2">": null,
        "</span>price_incl_vat<span class="s2">": 10450,
        "</span>price_delivery<span class="s2">": 0,
        "</span>price_bpm<span class="s2">": 1051,
@@ -837,7 +837,7 @@ Remember — don't forget to authenticate!
             </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"license_plate_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PD839Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"license_plate_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"chassis_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Opel"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Corsa"</span><span class="p">,</span><span class="w">
@@ -866,10 +866,10 @@ Remember — don't forget to authenticate!
         </span><span class="s2">"doors"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
         </span><span class="s2">"seats"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
         </span><span class="s2">"keys_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">1063</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"construction_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-01-01 00:00:00"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"apk_due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-26 00:00:00"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"price_excl_vat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10450.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_excl_vat"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"price_incl_vat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10450.00"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"price_delivery"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"price_bpm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1051.00"</span><span class="p">,</span><span class="w">
@@ -944,7 +944,7 @@ Remember — don't forget to authenticate!
 <tr>
 <td>license_plate_number</td>
 <td>The license plate number</td>
-<td>Yes</td>
+<td>No</td>
 <td></td>
 </tr>
 <tr>
@@ -1100,7 +1100,7 @@ Remember — don't forget to authenticate!
 <tr>
 <td>price_excl_vat</td>
 <td>Pricing excl VAT</td>
-<td>Yes</td>
+<td>No</td>
 <td><em>numeric</em></td>
 </tr>
 <tr>
@@ -1154,7 +1154,7 @@ Remember — don't forget to authenticate!
 <tr>
 <td>weight</td>
 <td>The weight in kilogram</td>
-<td>Yes</td>
+<td>No</td>
 <td><em>integer</em></td>
 </tr>
 <tr>
@@ -1201,7 +1201,7 @@ Remember — don't forget to authenticate!
     -H "</span>Accept: application/json<span class="s2">"
     --data {
        "</span>advertiser_id<span class="s2">": 1,
-       "</span>license_plate_number<span class="s2">": "</span>AABB11<span class="s2">",
+       "</span>license_plate_number<span class="s2">": null,
        "</span>chassis_number<span class="s2">": null,
        "</span>brand<span class="s2">": "</span>Opel<span class="s2">",
        "</span><span class="nb">type</span><span class="s2">": "</span>Corsa<span class="s2">",
@@ -1230,10 +1230,10 @@ Remember — don't forget to authenticate!
        "</span>doors<span class="s2">": 5,
        "</span>seats<span class="s2">": 5,
        "</span>keys_amount<span class="s2">": 2,
-       "</span>weight<span class="s2">": 1063,
+       "</span>weight<span class="s2">": null,
        "</span>construction_date<span class="s2">": "</span>2014-01-01<span class="s2">",
        "</span>apk_due_date<span class="s2">": "</span>2018-11-26<span class="s2">",
-       "</span>price_excl_vat<span class="s2">": 10450,
+       "</span>price_excl_vat<span class="s2">": null,
        "</span>price_incl_vat<span class="s2">": 10450,
        "</span>price_delivery<span class="s2">": 0,
        "</span>price_bpm<span class="s2">": 1051,
@@ -1302,7 +1302,7 @@ Remember — don't forget to authenticate!
             </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"license_plate_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AABB11"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"license_plate_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"chassis_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Opel"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Corsa"</span><span class="p">,</span><span class="w">
@@ -1331,10 +1331,10 @@ Remember — don't forget to authenticate!
         </span><span class="s2">"doors"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
         </span><span class="s2">"seats"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
         </span><span class="s2">"keys_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">1063</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"construction_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-01-01 00:00:00"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"apk_due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-26 00:00:00"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"price_excl_vat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10450.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_excl_vat"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"price_incl_vat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10450.00"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"price_delivery"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"price_bpm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1051.00"</span><span class="p">,</span><span class="w">
@@ -1409,7 +1409,7 @@ Remember — don't forget to authenticate!
 <tr>
 <td>license_plate_number</td>
 <td>The license plate number</td>
-<td>Yes</td>
+<td>No</td>
 <td></td>
 </tr>
 <tr>
@@ -1565,7 +1565,7 @@ Remember — don't forget to authenticate!
 <tr>
 <td>price_excl_vat</td>
 <td>Pricing excl VAT</td>
-<td>Yes</td>
+<td>No</td>
 <td><em>numeric</em></td>
 </tr>
 <tr>
@@ -1619,7 +1619,7 @@ Remember — don't forget to authenticate!
 <tr>
 <td>weight</td>
 <td>The weight in kilogram</td>
-<td>Yes</td>
+<td>No</td>
 <td><em>integer</em></td>
 </tr>
 <tr>
@@ -1709,7 +1709,7 @@ Remember — don't forget to authenticate!
             </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-02-2018 09:47:22"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"license_plate_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PD839Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"license_plate_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"chassis_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Opel"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Corsa"</span><span class="p">,</span><span class="w">
@@ -1738,10 +1738,10 @@ Remember — don't forget to authenticate!
         </span><span class="s2">"doors"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
         </span><span class="s2">"seats"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
         </span><span class="s2">"keys_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">1063</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"construction_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-01-01 00:00:00"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"apk_due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-26 00:00:00"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"price_excl_vat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10450.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price_excl_vat"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"price_incl_vat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10450.00"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"price_delivery"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"price_bpm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1051.00"</span><span class="p">,</span><span class="w">
