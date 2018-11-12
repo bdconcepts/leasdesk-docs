@@ -10,7 +10,7 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/create
     -H "Accept: application/json"
     --data {
        "advertiser_id": 1,
-       "license_plate_number": "PD839Z",
+       "license_plate_number": null,
        "chassis_number": null,
        "brand": "Opel",
        "type": "Corsa",
@@ -39,10 +39,10 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/create
        "doors": 5,
        "seats": 5,
        "keys_amount": 2,
-       "weight": 1063,
+       "weight": null,
        "construction_date": "2014-01-01",
        "apk_due_date": "2018-11-26",
-       "price_excl_vat": 10450,
+       "price_excl_vat": null,
        "price_incl_vat": 10450,
        "price_delivery": 0,
        "price_bpm": 1051,
@@ -113,7 +113,7 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/create
             "created_at": "20-02-2018 09:47:22",
             "updated_at": "20-02-2018 09:47:22"
         },
-        "license_plate_number": "PD839Z",
+        "license_plate_number": null,
         "chassis_number": null,
         "brand": "Opel",
         "type": "Corsa",
@@ -142,10 +142,10 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/create
         "doors": 5,
         "seats": 5,
         "keys_amount": 2,
-        "weight": 1063,
+        "weight": null,
         "construction_date": "2014-01-01 00:00:00",
         "apk_due_date": "2018-11-26 00:00:00",
-        "price_excl_vat": "10450.00",
+        "price_excl_vat": null,
         "price_incl_vat": "10450.00",
         "price_delivery": "0.00",
         "price_bpm": "1051.00",
@@ -211,7 +211,7 @@ This endpoint creates a new Car.
 Parameter | Description | Required | Validation
 --------- | ----------- | -------- | ----------
 advertiser_id | The ID a given by the Advertiser endpoint | Yes | *existing ID as returned by Advertiser endpoint*
-license_plate_number | The license plate number | Yes | 
+license_plate_number | The license plate number | No | 
 brand | The brand name | Yes | 
 type | The type name | Yes | 
 serie | The series description | Yes | 
@@ -237,7 +237,7 @@ engine_top_speed | The top speed of the vehicle | No | *integer*
 engine_top_speed_type | The speed type (see below) | No | *in: KM,M*
 apk_due_date | Due date for the yearly check-up | No | *date:Y-m-d*
 nap_valid | Does the car have a valid NAP? | No | *boolean*
-price_excl_vat | Pricing excl VAT | Yes | *numeric*
+price_excl_vat | Pricing excl VAT | No | *numeric*
 price_incl_vat | Pricing incl VAT | Yes | *numeric*
 price_delivery | Delivery costs | Yes | *numeric*
 price_bpm | The BPM amount | No | *numeric*
@@ -246,7 +246,7 @@ keys_amount | Amount of available keys | No | *integer*
 emission_co2 | The co2 emission in g/km | No | *integer*
 seats | The amount of seats | No | *integer*
 load_capacity | The load capacity in Liter | No | *integer*
-weight | The weight in kilogram | Yes | *integer*
+weight | The weight in kilogram | No | *integer*
 tax_benefit | Tax benefit class in percent | Yes | *numeric*
 road_tax_min | Minimum amount of road tax | Yes | *numeric*
 road_tax_max | Maximum amount of road tax | Yes | *numeric*
@@ -264,7 +264,7 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/<ID>
     -H "Accept: application/json"
     --data {
        "advertiser_id": 1,
-       "license_plate_number": "AABB11",
+       "license_plate_number": null,
        "chassis_number": null,
        "brand": "Opel",
        "type": "Corsa",
@@ -293,10 +293,10 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/<ID>
        "doors": 5,
        "seats": 5,
        "keys_amount": 2,
-       "weight": 1063,
+       "weight": null,
        "construction_date": "2014-01-01",
        "apk_due_date": "2018-11-26",
-       "price_excl_vat": 10450,
+       "price_excl_vat": null,
        "price_incl_vat": 10450,
        "price_delivery": 0,
        "price_bpm": 1051,
@@ -366,7 +366,7 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/<ID>
             "created_at": "20-02-2018 09:47:22",
             "updated_at": "20-02-2018 09:47:22"
         },
-        "license_plate_number": "AABB11",
+        "license_plate_number": null,
         "chassis_number": null,
         "brand": "Opel",
         "type": "Corsa",
@@ -395,10 +395,10 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/<ID>
         "doors": 5,
         "seats": 5,
         "keys_amount": 2,
-        "weight": 1063,
+        "weight": null,
         "construction_date": "2014-01-01 00:00:00",
         "apk_due_date": "2018-11-26 00:00:00",
-        "price_excl_vat": "10450.00",
+        "price_excl_vat": null,
         "price_incl_vat": "10450.00",
         "price_delivery": "0.00",
         "price_bpm": "1051.00",
@@ -464,7 +464,7 @@ This endpoint updates an existing Car.
 Parameter | Description | Required | Validation
 --------- | ----------- | -------- | ----------
 advertiser_id | The ID a given by the Advertiser endpoint | Yes | *existing ID as returned by Advertiser endpoint*
-license_plate_number | The license plate number | Yes | 
+license_plate_number | The license plate number | No | 
 brand | The brand name | Yes | 
 type | The type name | Yes | 
 serie | The series description | Yes | 
@@ -490,7 +490,7 @@ engine_top_speed | The top speed of the vehicle | No | *integer*
 engine_top_speed_type | The speed type (see below) | No | *in: KM,M*
 apk_due_date | Due date for the yearly check-up | No | *date:Y-m-d*
 nap_valid | Does the car have a valid NAP? | No | *boolean*
-price_excl_vat | Pricing excl VAT | Yes | *numeric*
+price_excl_vat | Pricing excl VAT | No | *numeric*
 price_incl_vat | Pricing incl VAT | Yes | *numeric*
 price_delivery | Delivery costs | Yes | *numeric*
 price_bpm | The BPM amount | No | *numeric*
@@ -499,7 +499,7 @@ keys_amount | Amount of available keys | No | *integer*
 emission_co2 | The co2 emission in g/km | No | *integer*
 seats | The amount of seats | No | *integer*
 load_capacity | The load capacity in Liter | No | *integer*
-weight | The weight in kilogram | Yes | *integer*
+weight | The weight in kilogram | No | *integer*
 tax_benefit | Tax benefit class in percent | No | *numeric*
 road_tax_min | Minimum amount of road tax | Yes | *numeric*
 road_tax_max | Maximum amount of road tax | Yes | *numeric*
@@ -571,7 +571,7 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/1"
             "created_at": "20-02-2018 09:47:22",
             "updated_at": "20-02-2018 09:47:22"
         },
-        "license_plate_number": "PD839Z",
+        "license_plate_number": null,
         "chassis_number": null,
         "brand": "Opel",
         "type": "Corsa",
@@ -600,10 +600,10 @@ curl "https://staging.financial.leasedesk.nl/api/v1/car/1"
         "doors": 5,
         "seats": 5,
         "keys_amount": 2,
-        "weight": 1063,
+        "weight": null,
         "construction_date": "2014-01-01 00:00:00",
         "apk_due_date": "2018-11-26 00:00:00",
-        "price_excl_vat": "10450.00",
+        "price_excl_vat": null,
         "price_incl_vat": "10450.00",
         "price_delivery": "0.00",
         "price_bpm": "1051.00",
