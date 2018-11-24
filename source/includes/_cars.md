@@ -247,9 +247,9 @@ emission_co2 | The co2 emission in g/km | No | *integer*
 seats | The amount of seats | No | *integer*
 load_capacity | The load capacity in Liter | No | *integer*
 weight | The weight in kilogram | No | *integer*
-tax_benefit | Tax benefit class in percent | Yes | *numeric*
-road_tax_min | Minimum amount of road tax | Yes | *numeric*
-road_tax_max | Maximum amount of road tax | Yes | *numeric*
+tax_benefit | Tax benefit class in percent | No | *numeric*
+road_tax_min | Minimum amount of road tax | No | *numeric*
+road_tax_max | Maximum amount of road tax | No | *numeric*
 images | Array of images (see below) | Yes | *array*
 videos | Array of videos (see below) | No | *array*
 accessories | Array of accessores (see below) | No | *array*
@@ -501,8 +501,8 @@ seats | The amount of seats | No | *integer*
 load_capacity | The load capacity in Liter | No | *integer*
 weight | The weight in kilogram | No | *integer*
 tax_benefit | Tax benefit class in percent | No | *numeric*
-road_tax_min | Minimum amount of road tax | Yes | *numeric*
-road_tax_max | Maximum amount of road tax | Yes | *numeric*
+road_tax_min | Minimum amount of road tax | No | *numeric*
+road_tax_max | Maximum amount of road tax | No | *numeric*
 images | Array of images (see below) | Yes | *array*
 videos | Array of videos (see below) | No | *array*
 accessories | Array of accessores (see below) | No | *array*
